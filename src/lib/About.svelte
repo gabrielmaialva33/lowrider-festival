@@ -66,12 +66,17 @@
   }
   
   .feature-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 
+      0 8px 32px rgba(0,0,0,0.3),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+    border: 1px solid var(--gold-accent);
+    transition: all 0.3s ease;
+    color: var(--dark);
   }
   
   .feature-card:hover {
