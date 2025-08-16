@@ -150,17 +150,18 @@
     }
 
     .activity-card:nth-child(4) {
-        border-color: var(--turquoise);
+        border-color: var(--teal);
         background: linear-gradient(135deg,
-        rgba(64, 224, 208, 0.95) 0%,
+        var(--teal) 0%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
 
     .activity-card:nth-child(5) {
-        border-color: var(--sun-yellow);
+        border-color: var(--orange);
         background: linear-gradient(135deg,
-        rgba(253, 184, 19, 0.95) 0%,
+        var(--orange) 0%,
+        var(--peach) 50%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
