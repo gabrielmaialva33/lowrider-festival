@@ -31,7 +31,8 @@
                 </ul>
             </div>
             <div class="location-map">
-                <span>🗺️ Mapa Interativo</span>
+                <MapPin size={48} />
+                <span>Mapa Interativo</span>
             </div>
         </div>
     </div>
