@@ -1,5 +1,6 @@
 <script>
     import {onMount} from 'svelte';
+    import {Car, Menu, X} from 'lucide-svelte';
 
     let scrolled = false;
     let mobileMenuOpen = false;
@@ -27,7 +28,10 @@
 
 <nav class:scrolled>
     <div class="nav-container">
-        <a class="logo" href="#home">🚗 LOWRIDER FEST</a>
+        <a class="logo" href="#home">
+            <Car size={32} />
+            <span>LOWRIDER FEST</span>
+        </a>
 
         <ul class="nav-links" class:active={mobileMenuOpen}>
             <li><a href="#home" on:click={closeMobileMenu}>Início</a></li>
@@ -41,9 +45,11 @@
         </ul>
 
         <button aria-label="Menu" class="menu-toggle" on:click={toggleMobileMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
+            {#if mobileMenuOpen}
+                <X size={24} />
+            {:else}
+                <Menu size={24} />
+            {/if}
         </button>
     </div>
 </nav>
