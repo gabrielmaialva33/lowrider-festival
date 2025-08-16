@@ -223,7 +223,7 @@
     .location :global(.section-title) {
         color: white !important;
         text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
-        0 0 20px rgba(255, 215, 0, 0.4);
+        0 0 20px rgba(255, 217, 174, 0.4);
         font-weight: 800;
         letter-spacing: 3px;
     }
