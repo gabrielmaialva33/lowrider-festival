@@ -23,7 +23,3 @@
 <Team />
 <Contact />
 <Footer />
-
-<style>
-  /* Component styles are handled in individual components */
-</style>
