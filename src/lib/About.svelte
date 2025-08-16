@@ -1,9 +1,27 @@
 <script>
+  import { Car, Utensils, Music, Store } from 'lucide-svelte';
+  
   const features = [
-    { icon: '🚗', title: '200+ Carros', desc: 'Exposição exclusiva' },
-    { icon: '🎨', title: 'Arte ao Vivo', desc: 'Grafite e pintura' },
-    { icon: '🏆', title: 'Competições', desc: 'Prêmios incríveis' },
-    { icon: '🎵', title: 'Shows ao Vivo', desc: 'Hip-hop e mais' }
+    { 
+      icon: Car, 
+      title: 'Exposição de Carros', 
+      desc: '200+ lowriders e veículos customizados em exposição' 
+    },
+    { 
+      icon: Utensils, 
+      title: 'Praça de Alimentação', 
+      desc: 'Food trucks e comidas típicas mexicanas' 
+    },
+    { 
+      icon: Music, 
+      title: 'Shows ao Vivo', 
+      desc: 'Hip-hop, rap e música chicana' 
+    },
+    { 
+      icon: Store, 
+      title: 'Barracas de Exposição', 
+      desc: 'Artesanato, roupas e acessórios automotivos' 
+    }
   ];
 </script>
 
@@ -25,7 +43,9 @@
       <div class="about-features">
         {#each features as feature}
           <div class="feature-card">
-            <div class="feature-icon">{feature.icon}</div>
+            <div class="feature-icon">
+              <svelte:component this={feature.icon} size={48} strokeWidth={1.5} />
+            </div>
             <h3>{feature.title}</h3>
             <p>{feature.desc}</p>
           </div>
@@ -87,8 +107,20 @@
   }
   
   .feature-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feature-icon :global(svg) {
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover .feature-icon :global(svg) {
+    transform: scale(1.1);
+    color: var(--gold-accent);
   }
   
   .feature-card h3 {
