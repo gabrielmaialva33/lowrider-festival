@@ -195,7 +195,7 @@
         position: relative;
         z-index: 2;
         padding: 20px;
-        background: rgba(255, 215, 0, 0.1);
+        background: rgba(255, 217, 174, 0.1);
         border-radius: 50%;
         width: 120px;
         height: 120px;
@@ -203,14 +203,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 3px solid var(--gold-accent);
+        border: 3px solid var(--peach);
         transition: all 0.4s ease;
     }
 
     .activity-card:hover .activity-icon {
-        background: var(--gold-accent);
+        background: var(--peach);
         transform: scale(1.1) rotate(360deg);
-        box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+        box-shadow: 0 0 30px rgba(255, 217, 174, 0.6);
     }
 
     .activity-title {
@@ -227,43 +227,59 @@
     }
 
     .activity-card:nth-child(1) .activity-title {
-        color: var(--candy-red);
+        color: var(--coral);
     }
 
     .activity-card:nth-child(2) .activity-title {
-        color: var(--deep-purple);
+        color: var(--violet);
     }
 
     .activity-card:nth-child(3) .activity-title {
-        color: var(--royal-blue);
+        color: var(--blue);
     }
 
     .activity-card:nth-child(4) .activity-title {
-        color: var(--turquoise);
+        color: var(--teal);
     }
 
     .activity-card:nth-child(5) .activity-title {
-        color: var(--sun-yellow);
+        color: var(--orange);
     }
 
     .activity-card:nth-child(6) .activity-title {
-        color: var(--chrome-silver);
+        color: var(--light-purple);
     }
 
     .activity-desc {
         font-size: 1.1em;
-        opacity: 0.9;
+        opacity: 0.85;
         position: relative;
         z-index: 2;
-        color: #555;
+        color: var(--primary-purple);
         line-height: 1.6;
         font-weight: 500;
+        text-align: center;
+    }
+
+    /* Enhanced hover effects for better UX */
+    .activity-card:hover .activity-title {
+        color: var(--primary-purple) !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .activity-card:hover .activity-desc {
+        color: var(--dark-rose);
+        opacity: 1;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
+        .activities {
+            padding: 60px 0;
+        }
+
         .activities-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -287,6 +303,10 @@
     }
 
     @media (max-width: 480px) {
+        .activities {
+            padding: 40px 0;
+        }
+
         .activities-grid {
             grid-template-columns: 1fr;
             gap: 20px;
@@ -294,7 +314,36 @@
 
         .activity-card {
             padding: 25px 20px;
+            min-height: 280px;
         }
+
+        .activity-icon {
+            width: 80px;
+            height: 80px;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .activity-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .activity-desc {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* Reduce animation intensity on mobile */
+        .activity-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .activity-card:nth-child(odd):hover,
+        .activity-card:nth-child(even):hover {
+            animation: none;
+        }
+    }
 
         .activity-icon {
             width: 80px;
