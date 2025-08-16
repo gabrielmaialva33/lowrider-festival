@@ -1,9 +1,11 @@
 <script>
+    import {Facebook, Instagram, MessageCircle, Mail} from 'lucide-svelte';
+    
     const socialLinks = [
-        {name: 'Facebook', icon: '📘', url: '#'},
-        {name: 'Instagram', icon: '📷', url: '#'},
-        {name: 'WhatsApp', icon: '📱', url: '#'},
-        {name: 'Email', icon: '📧', url: '#'}
+        {name: 'Facebook', icon: Facebook, url: '#'},
+        {name: 'Instagram', icon: Instagram, url: '#'},
+        {name: 'WhatsApp', icon: MessageCircle, url: '#'},
+        {name: 'Email', icon: Mail, url: '#'}
     ];
 </script>
 
@@ -12,7 +14,8 @@
         <div class="social-links">
             {#each socialLinks as link}
                 <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    {link.icon} {link.name}
+                    <svelte:component this={link.icon} size={20} />
+                    <span>{link.name}</span>
                 </a>
             {/each}
         </div>
@@ -23,12 +26,11 @@
 <style>
     footer {
         background: linear-gradient(135deg,
-        var(--dark) 0%,
-        var(--secondary) 20%,
-        var(--candy-red) 40%,
-        var(--deep-purple) 60%,
-        var(--royal-blue) 80%,
-        var(--dark) 100%
+        var(--primary-purple) 0%,
+        var(--violet) 25%,
+        var(--ocean-blue) 50%,
+        var(--teal) 75%,
+        var(--primary-purple) 100%
         );
         color: white;
         padding: 60px 0 40px;
