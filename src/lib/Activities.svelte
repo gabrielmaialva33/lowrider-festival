@@ -1,20 +1,20 @@
 <script>
   import {onMount} from 'svelte';
   import {inView} from 'motion';
-  import LowriderIcons from './LowriderIcons.svelte';
+  import {Car, Bike, Target, Truck, Paintbrush, Zap} from 'lucide-svelte';
   import {staggerGrid} from './animations.js';
 
   const activities = [
         {
-            icon: 'lowrider-car',
+            icon: Car,
             title: 'Exposição Lowriders',
             desc: 'Os carros mais icônicos da cultura lowrider em exposição'
         },
-        {icon: 'lowbike', title: 'Lowbikes Show', desc: 'Bikes customizadas com estilo único'},
-        {icon: 'vinyl', title: 'Disputa In Roça', desc: 'Corrida de bikes radical com grandes prêmios'},
-        {icon: 'offroad', title: 'Trilhas 4x4', desc: 'Aventura off-road para os amantes de jipes'},
-        {icon: 'chicano-art', title: 'Arte Chicana', desc: 'Exposição e criação ao vivo de arte urbana'},
-        {icon: 'hydraulics', title: 'Hop Contest', desc: 'Competição de suspensão hidráulica'}
+        {icon: Bike, title: 'Lowbikes Show', desc: 'Bikes customizadas com estilo único'},
+        {icon: Target, title: 'Disputa In Roça', desc: 'Corrida de bikes radical com grandes prêmios'},
+        {icon: Truck, title: 'Trilhas 4x4', desc: 'Aventura off-road para os amantes de jipes'},
+        {icon: Paintbrush, title: 'Arte Chicana', desc: 'Exposição e criação ao vivo de arte urbana'},
+        {icon: Zap, title: 'Hop Contest', desc: 'Competição de suspensão hidráulica'}
     ];
 
     let activitiesSection;
