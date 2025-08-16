@@ -4,7 +4,8 @@
       "WebSearch",
       "Bash(mkdir:*)",
       "mcp__exa__web_search_exa",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "mcp__exa__crawling_exa"
     ],
     "deny": [],
     "ask": []
