@@ -30,7 +30,7 @@
             title: 'Barracas de Exposição',
             desc: 'Artesanato, roupas e acessórios automotivos',
             highlight: 'Arte e cultura',
-            color: 'var(--deep-purple)'
+            color: 'var(--violet)'
         }
     ];
 
