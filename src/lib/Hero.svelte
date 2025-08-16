@@ -20,10 +20,10 @@
   onMount(() => {
     visible = true;
     
-    // Set up parallax effect for video
-    if (heroVideo) {
-      parallaxScroll(heroVideo, 0.3);
-    }
+    // Alternar GIFs automaticamente a cada 8 segundos
+    const gifInterval = setInterval(() => {
+      currentGifIndex = (currentGifIndex + 1) % lowriderGifs.length;
+    }, 8000);
     
     // Enhanced entrance animations
     if (heroContent) {
@@ -56,6 +56,11 @@
         }
       );
     }
+    
+    // Cleanup interval on component destroy
+    return () => {
+      clearInterval(gifInterval);
+    };
   });
 </script>
 
@@ -63,7 +68,8 @@
   <!-- GIF Background Animado -->
   <div class="hero-gif-container">
     <img 
-      src="/images/gifs/lowrider-bounce.gif" 
+      bind:this={heroGif}
+      src={currentGif} 
       alt="Lowrider bouncing with hydraulics"
       class="hero-gif"
       loading="lazy"
@@ -114,6 +120,12 @@
     object-position: center;
     filter: brightness(0.7) contrast(1.1);
     transform: scale(1.05);
+    transition: all 0.8s ease-in-out;
+  }
+  
+  .hero-gif:hover {
+    transform: scale(1.08);
+    filter: brightness(0.8) contrast(1.2);
   }
   
   .hero-overlay {
