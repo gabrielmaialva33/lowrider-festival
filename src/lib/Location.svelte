@@ -109,7 +109,7 @@
     .location-info:hover {
         transform: translateY(-5px);
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-        border-color: var(--candy-red);
+        border-color: var(--coral);
     }
 
     .location-info h3 {
