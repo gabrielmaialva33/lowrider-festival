@@ -113,7 +113,7 @@
 {#if lightboxOpen && currentImage}
   <div 
     class="lightbox" 
-    on:click={closeLightbox}
+    on:click={(e) => e.target === e.currentTarget && closeLightbox()}
     on:keydown={(e) => e.key === 'Escape' && closeLightbox()}
     role="dialog"
     aria-modal="true"
@@ -122,8 +122,6 @@
   >
     <div 
       class="lightbox-content" 
-      on:click|stopPropagation
-      on:keydown|stopPropagation
       role="img"
       aria-labelledby="lightbox-title"
     >
