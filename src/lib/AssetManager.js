@@ -1,3 +1,5 @@
+import {getAssetPath} from './getAssetPath.js';
+
 // Assets reais de lowrider festivals encontrados no Google Images
 export const heroAssets = {
     video: {
