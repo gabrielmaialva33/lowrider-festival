@@ -54,9 +54,10 @@
 <style>
     .activities {
         background: linear-gradient(135deg,
-        var(--light) 0%,
-        rgba(248, 249, 250, 0.9) 50%,
-        var(--light) 100%
+        var(--white) 0%,
+        rgba(190, 155, 255, 0.1) 30%,
+        rgba(255, 217, 174, 0.15) 70%,
+        var(--white) 100%
         );
         padding: 100px 0;
         position: relative;
@@ -70,8 +71,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: linear-gradient(45deg, transparent 35%, var(--gold-accent) 35%, var(--gold-accent) 36%, transparent 36%),
-        linear-gradient(-45deg, transparent 35%, var(--turquoise) 35%, var(--turquoise) 36%, transparent 36%);
+        background-image: linear-gradient(45deg, transparent 35%, var(--peach) 35%, var(--peach) 36%, transparent 36%),
+        linear-gradient(-45deg, transparent 35%, var(--light-violet) 35%, var(--light-violet) 36%, transparent 36%);
         background-size: 70px 70px;
         opacity: 0.02;
         pointer-events: none;
