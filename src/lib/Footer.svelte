@@ -93,19 +93,23 @@
     .social-links a {
         color: white;
         text-decoration: none;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: var(--body-font);
         font-weight: 600;
         padding: 15px 25px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
-        border: 2px solid var(--gold-accent);
+        border: 2px solid var(--peach);
         border-radius: 50px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
         text-transform: uppercase;
         letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 48px;
     }
 
     .social-links a::before {
