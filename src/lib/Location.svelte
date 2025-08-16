@@ -115,7 +115,7 @@
     .location-info h3 {
         font-family: var(--heading-font);
         font-size: 2.2em;
-        color: var(--candy-red);
+        color: var(--coral);
         margin-bottom: 20px;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -196,7 +196,7 @@
 
     .location-details li:hover {
         padding-left: 10px;
-        color: var(--candy-red);
+        color: var(--coral);
     }
 
     .location-icon {
