@@ -183,7 +183,7 @@
 
     .location-details li {
         padding: 15px 0;
-        border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 217, 174, 0.3);
         display: flex;
         align-items: center;
         transition: all 0.3s ease;
