@@ -41,9 +41,10 @@
 <style>
     .location {
         background: linear-gradient(135deg,
-        var(--dark) 0%,
-        var(--secondary) 50%,
-        var(--royal-blue) 100%
+        var(--primary-purple) 0%,
+        var(--violet) 30%,
+        var(--ocean-blue) 70%,
+        var(--teal) 100%
         );
         color: white;
         padding: 100px 0;
