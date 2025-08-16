@@ -37,7 +37,10 @@
 
 <style>
   .about {
-    background: var(--light);
+    background: 
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=1200&h=800&fit=crop&crop=center') center/cover;
+    color: white;
   }
   
   .about-content {
