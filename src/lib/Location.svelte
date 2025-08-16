@@ -229,8 +229,8 @@
     }
 
     .location :global(.section-title::after) {
-        background: var(--gold-accent) !important;
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+        background: var(--peach) !important;
+        box-shadow: 0 0 20px rgba(255, 217, 174, 0.6),
         0 4px 8px rgba(0, 0, 0, 0.3);
         height: 6px !important;
         width: 120px !important;
