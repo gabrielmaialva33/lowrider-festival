@@ -27,7 +27,6 @@
 <Schedule/>
 <Location/>
 <Sponsors/>
-<Partners/>
 <Team/>
 <Contact/>
 <Footer/>
