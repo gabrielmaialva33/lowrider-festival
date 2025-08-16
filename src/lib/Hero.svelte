@@ -4,8 +4,18 @@
   import { fadeInUp, fadeInScale, parallaxScroll } from './animations.js';
   
   let heroContent;
-  let heroVideo;
+  let heroGif;
   let visible = false;
+  let currentGifIndex = 0;
+  
+  // Array de GIFs de lowrider
+  const lowriderGifs = [
+    '/images/gifs/lowrider-bounce.gif',
+    '/images/gifs/impala-lowrider.gif',
+    '/images/gifs/red-lowrider.gif'
+  ];
+  
+  $: currentGif = lowriderGifs[currentGifIndex];
   
   onMount(() => {
     visible = true;
@@ -87,20 +97,23 @@
     overflow: hidden;
   }
   
-  .hero-video-container {
+  .hero-gif-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
   }
   
-  .hero-video {
+  .hero-gif {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.7) contrast(1.1);
+    transform: scale(1.05);
   }
   
   .hero-overlay {
@@ -111,9 +124,9 @@
     height: 100%;
     background: 
       linear-gradient(135deg, 
-        rgba(204, 0, 0, 0.7) 0%, 
-        rgba(74, 14, 78, 0.6) 50%, 
-        rgba(0, 71, 171, 0.7) 100%
+        rgba(204, 0, 0, 0.8) 0%, 
+        rgba(74, 14, 78, 0.7) 50%, 
+        rgba(0, 71, 171, 0.8) 100%
       );
     z-index: 1;
   }
