@@ -201,16 +201,15 @@
 
     .location-icon {
         margin-right: 15px;
-        font-size: 1.5em;
-        background: var(--gold-accent);
-        color: var(--dark);
+        background: var(--peach);
+        color: var(--primary-purple);
         width: 40px;
         height: 40px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 3px 10px rgba(255, 217, 174, 0.3);
         transition: all 0.3s ease;
     }
 
