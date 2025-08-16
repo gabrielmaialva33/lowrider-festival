@@ -133,9 +133,9 @@
     .location-map {
         height: 400px;
         background: linear-gradient(135deg,
-        var(--candy-red) 0%,
-        var(--deep-purple) 50%,
-        var(--royal-blue) 100%
+        var(--coral) 0%,
+        var(--violet) 50%,
+        var(--blue) 100%
         );
         border-radius: 20px;
         display: flex;
