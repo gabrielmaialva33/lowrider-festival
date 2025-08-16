@@ -179,8 +179,8 @@ export const setupScrollAnimations = () => {
     fadeInUp(info.target);
   });
 
-  inView('.team-card', (info) => {
-    const cards = document.querySelectorAll('.team-card');
+  inView('.team-member', (info) => {
+    const cards = document.querySelectorAll('.team-member');
     cards.forEach((card, index) => {
       const isEven = index % 2 === 0;
       if (isEven) {
@@ -213,14 +213,15 @@ export const setupScrollAnimations = () => {
 
 // Enhanced hover effects
 export const setupHoverEffects = () => {
-  // Activity cards
+  // Activity cards with 3D tilt effect
   document.querySelectorAll('.activity-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
       animate(
         card,
         { 
           scale: 1.05,
-          rotateY: 5 
+          rotateY: 5,
+          rotateX: 2
         },
         { 
           duration: 0.3,
@@ -234,7 +235,8 @@ export const setupHoverEffects = () => {
         card,
         { 
           scale: 1,
-          rotateY: 0 
+          rotateY: 0,
+          rotateX: 0
         },
         { 
           duration: 0.3,
@@ -244,7 +246,96 @@ export const setupHoverEffects = () => {
     });
   });
 
-  // Magnetic effect for CTA buttons
+  // Team member cards bounce effect
+  document.querySelectorAll('.team-member').forEach(member => {
+    member.addEventListener('mouseenter', () => {
+      animate(
+        member,
+        { 
+          scale: 1.08,
+          rotateZ: 2
+        },
+        { 
+          duration: 0.4,
+          easing: [0.25, 0.46, 0.45, 0.94]
+        }
+      );
+    });
+
+    member.addEventListener('mouseleave', () => {
+      animate(
+        member,
+        { 
+          scale: 1,
+          rotateZ: 0
+        },
+        { 
+          duration: 0.4,
+          easing: [0.25, 0.46, 0.45, 0.94]
+        }
+      );
+    });
+  });
+
+  // Gallery items zoom effect
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    const container = img.closest('.gallery-item');
+    
+    container.addEventListener('mouseenter', () => {
+      animate(
+        img,
+        { scale: 1.1 },
+        { 
+          duration: 0.6,
+          easing: 'ease-out' 
+        }
+      );
+    });
+
+    container.addEventListener('mouseleave', () => {
+      animate(
+        img,
+        { scale: 1 },
+        { 
+          duration: 0.6,
+          easing: 'ease-out' 
+        }
+      );
+    });
+  });
+
+  // Enhanced button effects
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      animate(
+        button,
+        { 
+          scale: 1.05,
+          y: -2
+        },
+        { 
+          duration: 0.2,
+          easing: 'ease-out' 
+        }
+      );
+    });
+
+    button.addEventListener('mouseleave', () => {
+      animate(
+        button,
+        { 
+          scale: 1,
+          y: 0
+        },
+        { 
+          duration: 0.2,
+          easing: 'ease-out' 
+        }
+      );
+    });
+  });
+
+  // Magnetic effect for primary CTA buttons
   document.querySelectorAll('.btn-primary').forEach(magneticButton);
 };
 

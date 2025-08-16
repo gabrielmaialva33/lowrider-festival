@@ -10,6 +10,31 @@
   box-sizing: border-box;
 }
 
+/* Performance optimizations for animations */
+.activity-card,
+.team-member,
+.gallery-item,
+.btn {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Configuração do tema Tailwind CSS v4 */
 @theme {
   /* Cores autênticas da cultura lowrider */
