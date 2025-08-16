@@ -11,71 +11,79 @@ export const heroAssets = {
   fallbackImage: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1920&h=1080&fit=crop&crop=center"
 };
 
-// Galeria de imagens confiáveis para o festival lowrider
+// Galeria de imagens autênticas de festivais lowrider
 export const galleryAssets = [
   {
     id: 1,
     category: 'cars',
-    title: 'Lowrider Clássico',
-    description: 'Chevrolet Impala customizado com paint job metálico',
-    src: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&q=80'
+    title: 'Cultura Lowrider Old School',
+    description: 'Carros clássicos que deram origem à cultura lowrider',
+    src: '/images/lowrider-gallery/motortrend-lowrider-culture.jpg',
+    placeholder: '/images/lowrider-gallery/motortrend-lowrider-culture.jpg'
   },
   {
     id: 2,
     category: 'cars',
-    title: 'Festival Car Show',
-    description: 'Exposição de carros clássicos americanos',
-    src: 'https://images.unsplash.com/photo-1494905998402-395d579af36f?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1494905998402-395d579af36f?w=600&h=400&fit=crop&q=80'
+    title: 'Hispanic Heritage Festival',
+    description: 'Exposição de lowriders no festival de herança hispânica',
+    src: '/images/lowrider-gallery/hispanic-heritage-lowrider.jpg',
+    placeholder: '/images/lowrider-gallery/hispanic-heritage-lowrider.jpg'
   },
   {
     id: 3,
     category: 'culture',
-    title: 'Celebração Cultural',
-    description: 'Comunidade celebrando a herança chicana',
-    src: 'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600&h=400&fit=crop&q=80'
+    title: 'Altar Dia de los Muertos',
+    description: 'Altar do Dia dos Mortos ao lado de lowrider no festival',
+    src: '/images/lowrider-gallery/day-of-dead-altar-lowrider.jpg',
+    placeholder: '/images/lowrider-gallery/day-of-dead-altar-lowrider.jpg'
   },
   {
     id: 4,
     category: 'cars',
-    title: 'Hydraulic System',
-    description: 'Sistema hidráulico para lowrider hop contest',
-    src: 'https://images.unsplash.com/photo-1550355191-aa8a80b41353?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1550355191-aa8a80b41353?w=600&h=400&fit=crop&q=80'
+    title: 'Lowrider Laranja Festival',
+    description: 'Impala laranja no Slow & Low Chicago Festival',
+    src: '/images/lowrider-gallery/orange-lowrider-festival.jpg',
+    placeholder: '/images/lowrider-gallery/orange-lowrider-festival.jpg'
   },
   {
     id: 5,
-    category: 'art',
-    title: 'Arte Mural Chicana',
-    description: 'Expressão artística da cultura mexicano-americana',
-    src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&q=80'
+    category: 'bikes',
+    title: 'Lowrider Bike da Juventude',
+    description: 'Criança de 7 anos com bike lowrider customizada',
+    src: '/images/lowrider-gallery/lowrider-bike-youth.jpg',
+    placeholder: '/images/lowrider-gallery/lowrider-bike-youth.jpg'
   },
   {
     id: 6,
-    category: 'bikes',
-    title: 'Lowrider Bikes',
-    description: 'Bicicletas customizadas com detalhes únicos',
-    src: 'https://images.unsplash.com/photo-1558618047-b50c0e2bb1ab?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1558618047-b50c0e2bb1ab?w=600&h=400&fit=crop&q=80'
+    category: 'cars',
+    title: 'Chevys Vintage 1939-1949',
+    description: 'Chevrolet clássicos dos anos 39 e 49 em exposição',
+    src: '/images/lowrider-gallery/vintage-chevys-1939-1949.jpg',
+    placeholder: '/images/lowrider-gallery/vintage-chevys-1939-1949.jpg'
   },
   {
     id: 7,
     category: 'culture',
-    title: 'Encontro de Clubes',
-    description: 'Reunião de car clubs e lowrider enthusiasts',
-    src: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&h=400&fit=crop&q=80'
+    title: 'Família no Festival Lowrider',
+    description: 'Família visitando exposição de carros vintage',
+    src: '/images/lowrider-gallery/family-lowrider-exhibition.jpg',
+    placeholder: '/images/lowrider-gallery/family-lowrider-exhibition.jpg'
   },
   {
     id: 8,
+    category: 'culture',
+    title: 'Cultura Pachuco - Zoot Suits',
+    description: 'Trajes tradicionais da subcultura mexicano-americana',
+    src: '/images/lowrider-gallery/zoot-suits-pachuco-culture.jpg',
+    placeholder: '/images/lowrider-gallery/zoot-suits-pachuco-culture.jpg'
+  },
+  {
+    id: 9,
     category: 'cars',
-    title: 'Festival Music Stage',
-    description: 'Palco principal com música e performances ao vivo',
-    src: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&q=80',
-    placeholder: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&q=80'
+    title: 'Slow & Low Chicago Festival',
+    description: 'Navy Pier - maior festival de lowriders de Chicago',
+    src: '/images/lowrider-gallery/slow-low-chicago-festival.jpg',
+    placeholder: '/images/lowrider-gallery/slow-low-chicago-festival.jpg'
   }
 ];
 
