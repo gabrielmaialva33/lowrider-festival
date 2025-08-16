@@ -14,7 +14,7 @@
     { id: 'culture', name: 'Cultura', icon: '🎭' }
   ];
   
-  import { galleryAssets, optimizeImageUrl } from './AssetManager.svelte';
+  import { galleryAssets, optimizeImageUrl } from './AssetManager.js';
   
   // Imagens reais do festival lowrider
   const galleryItems = galleryAssets;

@@ -3,7 +3,8 @@
     "allow": [
       "WebSearch",
       "Bash(mkdir:*)",
-      "mcp__exa__web_search_exa"
+      "mcp__exa__web_search_exa",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
