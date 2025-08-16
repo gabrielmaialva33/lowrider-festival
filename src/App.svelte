@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import Header from './lib/Header.svelte';
   import Hero from './lib/Hero.svelte';
   import About from './lib/About.svelte';
@@ -10,6 +11,12 @@
   import Team from './lib/Team.svelte';
   import Contact from './lib/Contact.svelte';
   import Footer from './lib/Footer.svelte';
+  import { initAnimations } from './lib/animations.js';
+  
+  onMount(() => {
+    // Initialize all animations after components are mounted
+    initAnimations();
+  });
 </script>
 
 <Header />
