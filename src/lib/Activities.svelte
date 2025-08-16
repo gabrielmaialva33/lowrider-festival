@@ -167,9 +167,9 @@
     }
 
     .activity-card:nth-child(6) {
-        border-color: var(--chrome-silver);
+        border-color: var(--light-purple);
         background: linear-gradient(135deg,
-        rgba(192, 192, 192, 0.95) 0%,
+        var(--light-purple) 0%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
