@@ -132,28 +132,28 @@
     }
 
     .social-links a:hover {
-        color: var(--dark);
-        background: var(--gold-accent);
-        border-color: var(--chrome-silver);
+        color: var(--primary-purple);
+        background: var(--peach);
+        border-color: var(--light-purple);
         transform: translateY(-5px) scale(1.05);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(255, 215, 0, 0.5);
+        0 0 20px rgba(255, 217, 174, 0.5);
     }
 
     .social-links a:nth-child(1):hover {
-        background: linear-gradient(135deg, var(--candy-red), var(--gold-accent));
+        background: linear-gradient(135deg, var(--coral), var(--peach));
     }
 
     .social-links a:nth-child(2):hover {
-        background: linear-gradient(135deg, var(--deep-purple), var(--gold-accent));
+        background: linear-gradient(135deg, var(--violet), var(--pink));
     }
 
     .social-links a:nth-child(3):hover {
-        background: linear-gradient(135deg, var(--royal-blue), var(--gold-accent));
+        background: linear-gradient(135deg, var(--sky-blue), var(--teal));
     }
 
     .social-links a:nth-child(4):hover {
-        background: linear-gradient(135deg, var(--turquoise), var(--gold-accent));
+        background: linear-gradient(135deg, var(--orange), var(--peach));
     }
 
     footer p {
