@@ -85,7 +85,11 @@
     <!-- Grid de Imagens -->
     <div class="gallery-grid" bind:this={galleryContainer}>
       {#each filteredItems as item (item.id)}
-        <div class="gallery-item hydraulic-bounce" on:click={() => openLightbox(item)}>
+        <button 
+          class="gallery-item hydraulic-bounce" 
+          on:click={() => openLightbox(item)}
+          aria-label="Ver imagem {item.title} em tamanho completo"
+        >
           <div class="image-container">
             <img 
               data-src={item.placeholder} 
@@ -99,7 +103,7 @@
               <div class="zoom-icon">🔍</div>
             </div>
           </div>
-        </div>
+        </button>
       {/each}
     </div>
   </div>
@@ -107,8 +111,19 @@
 
 <!-- Lightbox Modal -->
 {#if lightboxOpen && currentImage}
-  <div class="lightbox" on:click={closeLightbox}>
-    <div class="lightbox-content" on:click|stopPropagation>
+  <div 
+    class="lightbox" 
+    on:click={closeLightbox}
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightbox-title"
+  >
+    <div 
+      class="lightbox-content" 
+      on:click|stopPropagation
+      role="img"
+      aria-labelledby="lightbox-title"
+    >
       <button class="close-btn" on:click={closeLightbox}>&times;</button>
       <img src={currentImage.placeholder} alt={currentImage.title} class="lightbox-image" />
       <div class="lightbox-info">
