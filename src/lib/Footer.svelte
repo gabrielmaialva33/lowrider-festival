@@ -50,8 +50,8 @@
                 0deg,
                 transparent,
                 transparent 10px,
-                var(--gold-accent) 10px,
-                var(--gold-accent) 12px,
+                var(--peach) 10px,
+                var(--peach) 12px,
                 transparent 12px,
                 transparent 22px
         ),
@@ -59,8 +59,8 @@
                 90deg,
                 transparent,
                 transparent 15px,
-                var(--chrome-silver) 15px,
-                var(--chrome-silver) 17px,
+                var(--light-purple) 15px,
+                var(--light-purple) 17px,
                 transparent 17px,
                 transparent 32px
         );
