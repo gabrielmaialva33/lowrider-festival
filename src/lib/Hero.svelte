@@ -67,7 +67,7 @@
         <h1 class="chicano-title">Festival Lowrider</h1>
         <h2 class="script-accent">& Cultura Chicana</h2>
         <p class="hero-subtitle lowrider-text">O maior encontro de cultura automotiva e arte chicana do Brasil</p>
-        <div class="hero-date chrome-border">🎵 28 e 29 de Junho de 2025 🎵</div>
+        <div class="hero-date chrome-border">28 e 29 de Junho de 2025</div>
         <div class="cta-buttons">
             <a class="btn btn-primary hydraulic-bounce candy-shine" href="#contact">Inscreva-se Agora</a>
             <a class="btn btn-secondary chrome-border" href="#about">Saiba Mais</a>
@@ -78,6 +78,7 @@
 <style>
     .hero {
         height: 100vh;
+        min-height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
