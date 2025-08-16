@@ -20,72 +20,72 @@ export const galleryAssets = [
         category: 'cars',
         title: 'Cultura Lowrider Old School',
         description: 'Carros clássicos que deram origem à cultura lowrider',
-        src: '/images/lowrider-gallery/motortrend-lowrider-culture.jpg',
-        placeholder: '/images/lowrider-gallery/motortrend-lowrider-culture.jpg'
+        src: getAssetPath('images/lowrider-gallery/motortrend-lowrider-culture.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/motortrend-lowrider-culture.jpg')
     },
     {
         id: 2,
         category: 'cars',
         title: 'Hispanic Heritage Festival',
         description: 'Exposição de lowriders no festival de herança hispânica',
-        src: '/images/lowrider-gallery/hispanic-heritage-lowrider.jpg',
-        placeholder: '/images/lowrider-gallery/hispanic-heritage-lowrider.jpg'
+        src: getAssetPath('images/lowrider-gallery/hispanic-heritage-lowrider.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/hispanic-heritage-lowrider.jpg')
     },
     {
         id: 3,
         category: 'culture',
         title: 'Altar Dia de los Muertos',
         description: 'Altar do Dia dos Mortos ao lado de lowrider no festival',
-        src: '/images/lowrider-gallery/day-of-dead-altar-lowrider.jpg',
-        placeholder: '/images/lowrider-gallery/day-of-dead-altar-lowrider.jpg'
+        src: getAssetPath('images/lowrider-gallery/day-of-dead-altar-lowrider.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/day-of-dead-altar-lowrider.jpg')
     },
     {
         id: 4,
         category: 'cars',
         title: 'Lowrider Laranja Festival',
         description: 'Impala laranja no Slow & Low Chicago Festival',
-        src: '/images/lowrider-gallery/orange-lowrider-festival.jpg',
-        placeholder: '/images/lowrider-gallery/orange-lowrider-festival.jpg'
+        src: getAssetPath('images/lowrider-gallery/orange-lowrider-festival.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/orange-lowrider-festival.jpg')
     },
     {
         id: 5,
         category: 'bikes',
         title: 'Lowrider Bike da Juventude',
         description: 'Criança de 7 anos com bike lowrider customizada',
-        src: '/images/lowrider-gallery/lowrider-bike-youth.jpg',
-        placeholder: '/images/lowrider-gallery/lowrider-bike-youth.jpg'
+        src: getAssetPath('images/lowrider-gallery/lowrider-bike-youth.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/lowrider-bike-youth.jpg')
     },
     {
         id: 6,
         category: 'cars',
         title: 'Chevys Vintage 1939-1949',
         description: 'Chevrolet clássicos dos anos 39 e 49 em exposição',
-        src: '/images/lowrider-gallery/vintage-chevys-1939-1949.jpg',
-        placeholder: '/images/lowrider-gallery/vintage-chevys-1939-1949.jpg'
+        src: getAssetPath('images/lowrider-gallery/vintage-chevys-1939-1949.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/vintage-chevys-1939-1949.jpg')
     },
     {
         id: 7,
         category: 'culture',
         title: 'Família no Festival Lowrider',
         description: 'Família visitando exposição de carros vintage',
-        src: '/images/lowrider-gallery/family-lowrider-exhibition.jpg',
-        placeholder: '/images/lowrider-gallery/family-lowrider-exhibition.jpg'
+        src: getAssetPath('images/lowrider-gallery/family-lowrider-exhibition.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/family-lowrider-exhibition.jpg')
     },
     {
         id: 8,
         category: 'culture',
         title: 'Cultura Pachuco - Zoot Suits',
         description: 'Trajes tradicionais da subcultura mexicano-americana',
-        src: '/images/lowrider-gallery/zoot-suits-pachuco-culture.jpg',
-        placeholder: '/images/lowrider-gallery/zoot-suits-pachuco-culture.jpg'
+        src: getAssetPath('images/lowrider-gallery/zoot-suits-pachuco-culture.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/zoot-suits-pachuco-culture.jpg')
     },
     {
         id: 9,
         category: 'cars',
         title: 'Slow & Low Chicago Festival',
         description: 'Navy Pier - maior festival de lowriders de Chicago',
-        src: '/images/lowrider-gallery/slow-low-chicago-festival.jpg',
-        placeholder: '/images/lowrider-gallery/slow-low-chicago-festival.jpg'
+        src: getAssetPath('images/lowrider-gallery/slow-low-chicago-festival.jpg'),
+        placeholder: getAssetPath('images/lowrider-gallery/slow-low-chicago-festival.jpg')
     }
 ];
 
