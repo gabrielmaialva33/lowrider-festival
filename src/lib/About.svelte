@@ -82,18 +82,61 @@
       </p>
     </div>
     
-    <!-- Cards de Features -->
+    <!-- Cards de Features com Animações -->
     <div class="features-grid">
-      {#each features as feature}
-        <div class="feature-card">
+      {#each features as feature, index}
+        <div 
+          class="feature-card"
+          style:transform="translateY({(1 - $cardSprings[index]) * 50}px) scale({$cardSprings[index]})"
+          style:opacity={$cardSprings[index]}
+          style:--feature-color={feature.color}
+        >
           <div class="feature-icon">
-            <svelte:component this={feature.icon} size={60} strokeWidth={1.5} />
+            <svelte:component 
+              this={feature.icon} 
+              size={60} 
+              strokeWidth={1.5}
+              style="transform: rotate({$iconRotation * (index + 1) / features.length}deg)"
+            />
+            <div class="icon-glow"></div>
           </div>
           <h3>{feature.title}</h3>
           <p class="feature-highlight">{feature.highlight}</p>
           <p>{feature.desc}</p>
+          
+          <!-- Sparkle effect -->
+          <div class="sparkle sparkle-1">
+            <Sparkles size={16} />
+          </div>
+          <div class="sparkle sparkle-2">
+            <Sparkles size={12} />
+          </div>
         </div>
       {/each}
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <Users size={40} />
+        <span class="stat-number">5000+</span>
+        <span class="stat-label">Visitantes</span>
+      </div>
+      <div class="stat-item">
+        <Car size={40} />
+        <span class="stat-number">200+</span>
+        <span class="stat-label">Lowriders</span>
+      </div>
+      <div class="stat-item">
+        <Calendar size={40} />
+        <span class="stat-number">2</span>
+        <span class="stat-label">Dias</span>
+      </div>
+      <div class="stat-item">
+        <MapPin size={40} />
+        <span class="stat-number">1</span>
+        <span class="stat-label">Local Épico</span>
+      </div>
     </div>
   </div>
 </section>
@@ -174,26 +217,45 @@
   }
   
   .feature-icon {
-    color: var(--primary);
+    color: var(--feature-color, var(--primary));
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(255, 107, 53, 0.1);
-    border-radius: 15px;
+    border-radius: 50%;
     padding: 20px;
     width: 100px;
     height: 100px;
     margin: 0 auto 20px;
-    border: 2px solid var(--primary);
-    transition: all 0.3s ease;
+    border: 3px solid var(--feature-color, var(--primary));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .icon-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, var(--feature-color, var(--primary)) 0%, transparent 70%);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    z-index: -1;
   }
   
   .feature-card:hover .feature-icon {
     background: rgba(255, 215, 0, 0.2);
-    color: var(--gold-accent);
     border-color: var(--gold-accent);
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+  
+  .feature-card:hover .icon-glow {
+    opacity: 0.3;
   }
   
   .feature-card h3 {
@@ -219,6 +281,82 @@
     margin: 0;
   }
   
+  /* Sparkle Effects */
+  .sparkle {
+    position: absolute;
+    color: var(--gold-accent);
+    opacity: 0;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  .sparkle-1 {
+    top: 15px;
+    right: 15px;
+    animation-delay: 0s;
+  }
+  
+  .sparkle-2 {
+    bottom: 15px;
+    left: 15px;
+    animation-delay: 1s;
+  }
+  
+  .feature-card:hover .sparkle {
+    opacity: 1;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { 
+      opacity: 0; 
+      transform: scale(0) rotate(0deg); 
+    }
+    50% { 
+      opacity: 1; 
+      transform: scale(1) rotate(180deg); 
+    }
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+  }
+  
+  .stat-item {
+    text-align: center;
+    color: white;
+  }
+  
+  .stat-item :global(svg) {
+    color: var(--gold-accent);
+    margin-bottom: 15px;
+  }
+  
+  .stat-number {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--gold-accent);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+  
   /* Responsive Design */
   @media (max-width: 768px) {
     .features-grid {
@@ -239,6 +377,16 @@
     
     .feature-card h3 {
       font-size: 1.3em;
+    }
+    
+    .stats-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 30px 20px;
+    }
+    
+    .stat-number {
+      font-size: 2em;
     }
   }
   
@@ -264,6 +412,20 @@
     
     .feature-card h3 {
       font-size: 1.2em;
+    }
+    
+    .stats-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 20px 15px;
+    }
+    
+    .stat-number {
+      font-size: 1.8em;
+    }
+    
+    .stat-label {
+      font-size: 0.9em;
     }
   }
 </style>

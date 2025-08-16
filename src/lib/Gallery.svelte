@@ -265,14 +265,6 @@
     animation: pulse 1.5s infinite;
   }
   
-  .gallery-image.loaded {
-    animation: fadeIn 0.5s ease;
-  }
-  
-  .gallery-image.error {
-    opacity: 0.7;
-    filter: grayscale(0.5);
-  }
   
   .image-overlay {
     position: absolute;
