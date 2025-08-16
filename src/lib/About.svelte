@@ -1,6 +1,5 @@
 <script>
-  import { Car, Utensils, Music, Store, ChevronLeft, ChevronRight } from 'lucide-svelte';
-  import { onMount } from 'svelte';
+  import { Car, Utensils, Music, Store } from 'lucide-svelte';
   
   const features = [
     { 
@@ -28,37 +27,6 @@
       highlight: 'Arte e cultura'
     }
   ];
-  
-  let currentSlide = 0;
-  let autoplayInterval;
-  
-  const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % features.length;
-  };
-  
-  const prevSlide = () => {
-    currentSlide = currentSlide === 0 ? features.length - 1 : currentSlide - 1;
-  };
-  
-  const goToSlide = (index) => {
-    currentSlide = index;
-  };
-  
-  const startAutoplay = () => {
-    autoplayInterval = setInterval(nextSlide, 5000);
-  };
-  
-  const stopAutoplay = () => {
-    if (autoplayInterval) {
-      clearInterval(autoplayInterval);
-      autoplayInterval = null;
-    }
-  };
-  
-  onMount(() => {
-    startAutoplay();
-    return () => stopAutoplay();
-  });
 </script>
 
 <section class="about" id="about">
