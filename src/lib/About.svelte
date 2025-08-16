@@ -16,14 +16,14 @@
             title: 'Praça de Alimentação',
             desc: 'Food trucks e comidas típicas mexicanas',
             highlight: 'Sabores autênticos',
-            color: 'var(--sun-yellow)'
+            color: 'var(--orange)'
         },
         {
             icon: Music,
             title: 'Shows ao Vivo',
             desc: 'Hip-hop, rap e música chicana',
             highlight: 'Artistas renomados',
-            color: 'var(--royal-blue)'
+            color: 'var(--blue)'
         },
         {
             icon: Store,
