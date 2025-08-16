@@ -2,6 +2,7 @@
   import {onMount} from 'svelte';
   import {animate} from 'motion';
   import {fadeInScale, fadeInUp} from './animations.js';
+  import {getAssetPath} from './getAssetPath.js';
 
   let heroContent;
     let heroVideo;
@@ -54,9 +55,9 @@
                 loop
                 muted
                 playsinline
-                poster="/images/gifs/lowrider-bounce.gif"
+                poster={getAssetPath("images/gifs/lowrider-bounce.gif")}
                 preload="auto"
-                src="/videos/lowrider-hero.mp4"
+                src={getAssetPath("videos/lowrider-hero.mp4")}
         ></video>
 
         <!-- Overlay escuro para legibilidade -->
