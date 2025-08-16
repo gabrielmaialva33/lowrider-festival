@@ -527,7 +527,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.95);
+        background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(26, 26, 26, 0.98) 50%,
+        rgba(0, 0, 0, 0.95) 100%
+        );
+        backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -539,28 +544,50 @@
         position: relative;
         max-width: 90vw;
         max-height: 90vh;
-        background: var(--dark);
-        border-radius: 15px;
+        background: linear-gradient(135deg,
+        var(--dark) 0%,
+        var(--secondary) 50%,
+        var(--dark) 100%
+        );
+        border-radius: 25px;
         overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(255, 215, 0, 0.3);
+        border: 3px solid var(--gold-accent);
     }
 
     .close-btn {
         position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 30px;
+        top: 20px;
+        right: 25px;
+        background: linear-gradient(135deg, 
+        var(--candy-red), 
+        var(--gold-accent)
+        );
+        border: 2px solid white;
+        color: var(--dark);
+        font-size: 24px;
         cursor: pointer;
         z-index: 1001;
-        transition: transform 0.2s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     }
 
     .close-btn:hover {
-        transform: scale(1.2);
-        color: var(--gold-accent);
+        transform: scale(1.2) rotate(90deg);
+        background: linear-gradient(135deg, 
+        var(--gold-accent), 
+        var(--sun-yellow)
+        );
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
     }
 
     .lightbox-image {
@@ -568,22 +595,36 @@
         height: auto;
         max-height: 70vh;
         object-fit: contain;
+        border-radius: 20px 20px 0 0;
     }
 
     .lightbox-info {
-        padding: 20px;
+        padding: 30px;
         text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(15px);
+        color: white;
     }
 
     .lightbox-title {
         font-family: var(--heading-font);
-        font-size: 2em;
-        margin-bottom: 10px;
+        font-size: 2.2em;
+        margin-bottom: 15px;
+        color: var(--gold-accent);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        font-weight: 800;
     }
 
     .lightbox-description {
-        font-size: 1.1em;
+        font-size: 1.2em;
         opacity: 0.9;
+        color: var(--chrome-silver);
+        line-height: 1.6;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     @keyframes fadeIn {
@@ -597,23 +638,142 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+        .gallery::after {
+            font-size: 2em;
+            top: 40px;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.2em;
+            padding: 12px 20px;
+            margin-bottom: 40px;
+        }
+
         .gallery-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .category-filters {
-            gap: 10px;
+            gap: 15px;
+            margin-bottom: 50px;
         }
 
         .category-btn {
-            padding: 10px 16px;
+            padding: 12px 20px;
+            font-size: 1em;
+            gap: 8px;
+        }
+
+        .category-icon {
+            font-size: 1.2em;
+        }
+
+        .image-title {
+            font-size: 1.4em;
+        }
+
+        .image-description {
             font-size: 0.9em;
+        }
+
+        .zoom-icon {
+            top: 15px;
+            right: 15px;
+            padding: 10px;
+            font-size: 1.2em;
         }
 
         .lightbox-content {
             max-width: 95vw;
             max-height: 95vh;
+        }
+
+        .lightbox-title {
+            font-size: 1.8em;
+        }
+
+        .lightbox-description {
+            font-size: 1em;
+        }
+
+        .close-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            top: 15px;
+            right: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery {
+            padding: 80px 0;
+        }
+
+        .gallery::after {
+            font-size: 1.5em;
+            top: 30px;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1em;
+            padding: 10px 15px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .category-filters {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            font-size: 0.9em;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .image-title {
+            font-size: 1.2em;
+        }
+
+        .image-description {
+            font-size: 0.85em;
+        }
+
+        .zoom-icon {
+            top: 12px;
+            right: 12px;
+            padding: 8px;
+            font-size: 1em;
+        }
+
+        .lightbox-info {
+            padding: 20px;
+        }
+
+        .lightbox-title {
+            font-size: 1.5em;
+        }
+
+        .lightbox-description {
+            font-size: 0.9em;
+        }
+
+        .close-btn {
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            top: 12px;
+            right: 15px;
         }
     }
 </style>
