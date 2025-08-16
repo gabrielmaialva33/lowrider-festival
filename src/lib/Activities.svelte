@@ -343,20 +343,4 @@
         .activity-card:nth-child(even):hover {
             animation: none;
         }
-    }
-
-        .activity-icon {
-            width: 80px;
-            height: 80px;
-            font-size: 2.5em;
-        }
-
-        .activity-title {
-            font-size: 1.2em;
-        }
-
-        .activity-desc {
-            font-size: 0.95em;
-        }
-    }
 </style>
