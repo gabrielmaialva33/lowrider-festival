@@ -177,8 +177,8 @@
     .activity-card:hover {
         transform: translateY(-15px) scale(1.05);
         box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3),
-        0 0 30px rgba(255, 215, 0, 0.4);
-        border-color: var(--gold-accent);
+        0 0 30px rgba(255, 217, 174, 0.4);
+        border-color: var(--peach);
     }
 
     .activity-card:nth-child(odd):hover {
