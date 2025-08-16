@@ -50,22 +50,14 @@
 </script>
 
 <section class="hero" id="home">
-  <!-- Vídeo Background -->
-  <div class="hero-video-container">
-    <video 
-      bind:this={heroVideo}
-      autoplay 
-      loop 
-      muted 
-      playsinline
-      poster="/images/hero-poster.jpg"
-      class="hero-video"
-    >
-      <source src="/videos/hero-lowrider.mp4" type="video/mp4">
-      <source src="/videos/hero-lowrider.webm" type="video/webm">
-      <!-- Fallback para navegadores sem suporte -->
-      Seu navegador não suporta vídeo HTML5.
-    </video>
+  <!-- GIF Background Animado -->
+  <div class="hero-gif-container">
+    <img 
+      src="/images/gifs/lowrider-bounce.gif" 
+      alt="Lowrider bouncing with hydraulics"
+      class="hero-gif"
+      loading="lazy"
+    />
     
     <!-- Overlay escuro para legibilidade -->
     <div class="hero-overlay"></div>
