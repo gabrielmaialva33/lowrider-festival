@@ -1,9 +1,11 @@
 <script>
+    import {MapPin, Car, Utensils, Info} from 'lucide-svelte';
+    
     const locationDetails = [
-        {icon: '📍', text: 'Aeroporto Municipal - Cidade/Estado'},
-        {icon: '🚗', text: 'Estacionamento com transporte shuttle gratuito'},
-        {icon: '🍔', text: 'Praça de alimentação completa'},
-        {icon: '🚻', text: 'Banheiros e infraestrutura completa'}
+        {icon: MapPin, text: 'Aeroporto Municipal - Cidade/Estado'},
+        {icon: Car, text: 'Estacionamento com transporte shuttle gratuito'},
+        {icon: Utensils, text: 'Praça de alimentação completa'},
+        {icon: Info, text: 'Banheiros e infraestrutura completa'}
     ];
 </script>
 
@@ -20,7 +22,9 @@
                 <ul class="location-details">
                     {#each locationDetails as detail}
                         <li>
-                            <span class="location-icon">{detail.icon}</span>
+                            <span class="location-icon">
+                                <svelte:component this={detail.icon} size={20} />
+                            </span>
                             <span>{detail.text}</span>
                         </li>
                     {/each}
