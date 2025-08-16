@@ -59,8 +59,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: linear-gradient(45deg, transparent 35%, var(--gold-accent) 35%, var(--gold-accent) 36%, transparent 36%),
-        linear-gradient(-45deg, transparent 35%, var(--turquoise) 35%, var(--turquoise) 36%, transparent 36%);
+        background-image: linear-gradient(45deg, transparent 35%, var(--peach) 35%, var(--peach) 36%, transparent 36%),
+        linear-gradient(-45deg, transparent 35%, var(--teal) 35%, var(--teal) 36%, transparent 36%);
         background-size: 40px 40px;
         opacity: 0.03;
         pointer-events: none;
