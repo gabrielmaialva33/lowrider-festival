@@ -16,7 +16,8 @@
       "Bash(pnpm add:*)",
       "Bash(pnpm add:*)",
       "mcp__sequential-thinking__sequentialthinking",
-      "mcp__fountain-pen-ink-server__search_inks_by_color"
+      "mcp__fountain-pen-ink-server__search_inks_by_color",
+      "mcp__fountain-pen-ink-server__get_color_palette"
     ],
     "deny": [],
     "ask": []
