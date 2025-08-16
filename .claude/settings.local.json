@@ -6,7 +6,8 @@
       "mcp__exa__web_search_exa",
       "Bash(rm:*)",
       "mcp__exa__crawling_exa",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "mcp__playwright__browser_navigate"
     ],
     "deny": [],
     "ask": []
