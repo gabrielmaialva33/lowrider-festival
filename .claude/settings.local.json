@@ -15,7 +15,8 @@
       "mcp__ref__ref_read_url",
       "Bash(pnpm add:*)",
       "Bash(pnpm add:*)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__fountain-pen-ink-server__search_inks_by_color"
     ],
     "deny": [],
     "ask": []
