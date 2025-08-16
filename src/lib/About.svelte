@@ -1,32 +1,74 @@
 <script>
-  import { Car, Utensils, Music, Store } from 'lucide-svelte';
+  import { Car, Utensils, Music, Store, Sparkles, Users, Calendar, MapPin } from 'lucide-svelte';
+  import { Spring, prefersReducedMotion } from 'svelte/motion';
+  import { onMount } from 'svelte';
   
   const features = [
     { 
       icon: Car, 
       title: 'Exposição de Carros', 
       desc: '200+ lowriders e veículos customizados em exposição',
-      highlight: 'Mais de 200 carros únicos'
+      highlight: 'Mais de 200 carros únicos',
+      color: 'var(--candy-red)'
     },
     { 
       icon: Utensils, 
       title: 'Praça de Alimentação', 
       desc: 'Food trucks e comidas típicas mexicanas',
-      highlight: 'Sabores autênticos'
+      highlight: 'Sabores autênticos',
+      color: 'var(--sun-yellow)'
     },
     { 
       icon: Music, 
       title: 'Shows ao Vivo', 
       desc: 'Hip-hop, rap e música chicana',
-      highlight: 'Artistas renomados'
+      highlight: 'Artistas renomados',
+      color: 'var(--royal-blue)'
     },
     { 
       icon: Store, 
       title: 'Barracas de Exposição', 
       desc: 'Artesanato, roupas e acessórios automotivos',
-      highlight: 'Arte e cultura'
+      highlight: 'Arte e cultura',
+      color: 'var(--deep-purple)'
     }
   ];
+  
+  // Springs for staggered animations
+  const cardSprings = features.map(() => new Spring(0, {
+    stiffness: 0.1,
+    damping: 0.8
+  }));
+  
+  const iconRotation = new Spring(0, {
+    stiffness: 0.05,
+    damping: 0.7
+  });
+  
+  let visible = false;
+  
+  onMount(() => {
+    // Staggered entrance animation
+    setTimeout(() => {
+      visible = true;
+      cardSprings.forEach((spring, index) => {
+        setTimeout(() => {
+          spring.set(1);
+        }, index * 150); // 150ms delay between each card
+      });
+    }, 200);
+    
+    // Continuous icon rotation
+    const rotateIcons = () => {
+      iconRotation.set(360);
+      setTimeout(() => {
+        iconRotation.set(0);
+        setTimeout(rotateIcons, 3000);
+      }, 2000);
+    };
+    
+    setTimeout(rotateIcons, 1000);
+  });
 </script>
 
 <section class="about" id="about">
