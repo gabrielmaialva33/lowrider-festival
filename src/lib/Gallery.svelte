@@ -42,20 +42,50 @@
   }
   
   onMount(() => {
-    // Lazy loading observer
-    const images = galleryContainer.querySelectorAll('img[data-src]');
+    // Otimized lazy loading observer conforme documentação Svelte
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
+          
+          // Carregar imagem com fallback
+          loadImageWithFallback(img.dataset.src, img.dataset.fallback || img.dataset.src)
+            .then(resolvedSrc => {
+              img.src = resolvedSrc;
+              img.classList.remove('lazy');
+              img.classList.add('loaded');
+            })
+            .catch(() => {
+              // Fallback para imagem de erro
+              img.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&q=60';
+              img.classList.remove('lazy');
+              img.classList.add('error');
+            });
+          
           observer.unobserve(img);
         }
       });
+    }, {
+      // Configurações otimizadas para performance
+      rootMargin: '50px 0px',
+      threshold: 0.1
     });
     
-    images.forEach(img => imageObserver.observe(img));
+    // Observar todas as imagens lazy
+    const observeImages = () => {
+      const images = galleryContainer.querySelectorAll('img[data-src]:not(.loaded):not(.error)');
+      images.forEach(img => imageObserver.observe(img));
+    };
+    
+    observeImages();
+    
+    // Re-observar quando filtros mudarem
+    const filterButtons = document.querySelectorAll('.category-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(observeImages, 100);
+      });
+    });
     
     return () => imageObserver.disconnect();
   });
@@ -92,13 +122,15 @@
         >
           <div class="image-container">
             <img 
-              data-src={item.placeholder} 
+              data-src={optimizeImageUrl(item.src, 600, 400, 80)} 
+              data-fallback={item.placeholder}
               alt={item.title}
               class="gallery-image lazy"
               loading="lazy"
-              on:error={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&q=60';
-              }}
+              width="600"
+              height="400"
+              decoding="async"
+              fetchpriority={item.id <= 2 ? "high" : "auto"}
             />
             <div class="image-overlay">
               <h3 class="image-title">{item.title}</h3>
