@@ -39,6 +39,16 @@
     background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
     border-radius: 15px;
     transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .team-member:nth-child(even) {
+    transform: translateX(100px) translateY(50px);
+  }
+  
+  .team-member:nth-child(odd) {
+    transform: translateX(-100px) translateY(50px);
   }
   
   .team-member:hover {

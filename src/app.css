@@ -1,3 +1,6 @@
+/* Importar Tailwind CSS v4 */
+@import "tailwindcss";
+
 /* Importar fontes inspiradas na tipografia chicana */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Dancing+Script:wght@700&display=swap');
 
@@ -7,34 +10,52 @@
   box-sizing: border-box;
 }
 
-:root {
+/* Configuração do tema Tailwind CSS v4 */
+@theme {
   /* Cores autênticas da cultura lowrider */
-  --candy-red: #CC0000;
-  --chrome-silver: #C0C0C0;
-  --royal-blue: #0047AB;
-  --deep-purple: #4A0E4E;
-  --gold-accent: #FFD700;
+  --color-candy-red: #CC0000;
+  --color-chrome-silver: #C0C0C0;
+  --color-royal-blue: #0047AB;
+  --color-deep-purple: #4A0E4E;
+  --color-gold-accent: #FFD700;
   
   /* Cores da herança chicana/asteca */
-  --aztec-orange: #ff6b35; /* Mantém a cor laranja original */
-  --earth-brown: #8B4513;
-  --turquoise: #40E0D0;
-  --sun-yellow: #FDB813;
+  --color-aztec-orange: #ff6b35;
+  --color-earth-brown: #8B4513;
+  --color-turquoise: #40E0D0;
+  --color-sun-yellow: #FDB813;
   
-  /* Cores base do sistema */
-  --primary: var(--aztec-orange);
-  --secondary: var(--deep-purple);
-  --accent: var(--royal-blue);
-  --dark: #1a1a1a;
-  --light: #f8f9fa;
-  --white: #ffffff;
+  /* Cores base do sistema (mapeadas para Tailwind) */
+  --color-primary: var(--color-aztec-orange);
+  --color-secondary: var(--color-deep-purple);
+  --color-accent: var(--color-royal-blue);
+  --color-dark: #1a1a1a;
+  --color-light: #f8f9fa;
   
   /* Tipografia inspirada na cultura chicana */
-  --heading-font: 'Bebas Neue', 'Oswald', sans-serif;
-  --script-font: 'Dancing Script', cursive;
-  --body-font: 'Oswald', 'Segoe UI', sans-serif;
+  --font-heading: 'Bebas Neue', 'Oswald', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-body: 'Oswald', 'Segoe UI', sans-serif;
   
-  font-family: var(--body-font);
+  /* Breakpoints customizados */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Spacing customizado para design lowrider */
+  --spacing-lowrider: 3.5rem;
+  --spacing-chrome: 2.25rem;
+  
+  /* Border radius inspirado no design automotivo */
+  --radius-chrome: 0.75rem;
+  --radius-lowrider: 1.5rem;
+}
+
+:root {
+  font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
