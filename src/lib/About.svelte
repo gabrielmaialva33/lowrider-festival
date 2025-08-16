@@ -87,8 +87,8 @@
       {#each features as feature, index}
         <div 
           class="feature-card"
-          style:transform="translateY({(1 - $cardSprings[index]) * 50}px) scale({$cardSprings[index]})"
-          style:opacity={$cardSprings[index]}
+          style:transform="translateY({(1 - cardSprings[index].current) * 50}px) scale({cardSprings[index].current})"
+          style:opacity={cardSprings[index].current}
           style:--feature-color={feature.color}
         >
           <div class="feature-icon">
@@ -96,7 +96,7 @@
               this={feature.icon} 
               size={60} 
               strokeWidth={1.5}
-              style="transform: rotate({$iconRotation * (index + 1) / features.length}deg)"
+              style="transform: rotate({iconRotation.current * (index + 1) / features.length}deg)"
             />
             <div class="icon-glow"></div>
           </div>
