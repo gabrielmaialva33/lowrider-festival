@@ -44,16 +44,6 @@
 <style>
   .hero {
     height: 100vh;
-    background: 
-      linear-gradient(135deg, 
-        rgba(204, 0, 0, 0.9) 0%, 
-        rgba(74, 14, 78, 0.85) 50%, 
-        rgba(0, 71, 171, 0.9) 100%
-      ),
-      radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(64, 224, 208, 0.1) 0%, transparent 50%);
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +53,38 @@
     overflow: hidden;
   }
   
-  .hero::before {
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(135deg, 
+        rgba(204, 0, 0, 0.7) 0%, 
+        rgba(74, 14, 78, 0.6) 50%, 
+        rgba(0, 71, 171, 0.7) 100%
+      );
+    z-index: 1;
+  }
+  
+  .hero-overlay::after {
     content: '';
     position: absolute;
     top: 0;
@@ -74,8 +95,7 @@
       linear-gradient(45deg, transparent 35%, var(--gold-accent) 35%, var(--gold-accent) 36%, transparent 36%),
       linear-gradient(-45deg, transparent 35%, var(--turquoise) 35%, var(--turquoise) 36%, transparent 36%);
     background-size: 60px 60px;
-    opacity: 0.03;
-    z-index: 1;
+    opacity: 0.05;
   }
   
   .hero-content {
