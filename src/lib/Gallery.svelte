@@ -14,7 +14,7 @@
     { id: 'culture', name: 'Cultura', icon: '🎭' }
   ];
   
-  import { galleryAssets, optimizeImageUrl } from './AssetManager.js';
+  import { galleryAssets, optimizeImageUrl, loadImageWithFallback } from './AssetManager.js';
   
   // Imagens reais do festival lowrider
   const galleryItems = galleryAssets;
@@ -96,6 +96,9 @@
               alt={item.title}
               class="gallery-image lazy"
               loading="lazy"
+              on:error={(e) => {
+                e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&q=60';
+              }}
             />
             <div class="image-overlay">
               <h3 class="image-title">{item.title}</h3>
@@ -125,7 +128,14 @@
       aria-labelledby="lightbox-title"
     >
       <button class="close-btn" on:click={closeLightbox}>&times;</button>
-      <img src={currentImage.placeholder} alt={currentImage.title} class="lightbox-image" />
+      <img 
+        src={currentImage.placeholder} 
+        alt={currentImage.title} 
+        class="lightbox-image"
+        on:error={(e) => {
+          e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80';
+        }}
+      />
       <div class="lightbox-info">
         <h3 class="lightbox-title chrome-text">{currentImage.title}</h3>
         <p class="lightbox-description">{currentImage.description}</p>
