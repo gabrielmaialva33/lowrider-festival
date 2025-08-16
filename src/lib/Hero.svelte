@@ -1,10 +1,51 @@
 <script>
   import { onMount } from 'svelte';
+  import { animate, inView } from 'motion';
+  import { fadeInUp, fadeInScale, parallaxScroll } from './animations.js';
   
+  let heroContent;
+  let heroVideo;
   let visible = false;
   
   onMount(() => {
     visible = true;
+    
+    // Set up parallax effect for video
+    if (heroVideo) {
+      parallaxScroll(heroVideo, 0.3);
+    }
+    
+    // Enhanced entrance animations
+    if (heroContent) {
+      // Animate title
+      const title = heroContent.querySelector('h1');
+      const subtitle = heroContent.querySelector('h2');
+      const description = heroContent.querySelector('.hero-subtitle');
+      const date = heroContent.querySelector('.hero-date');
+      const buttons = heroContent.querySelector('.cta-buttons');
+      
+      setTimeout(() => {
+        if (title) fadeInUp(title, 0);
+        if (subtitle) fadeInUp(subtitle, 0.2);
+        if (description) fadeInUp(description, 0.4);
+        if (date) fadeInScale(date, 0.6);
+        if (buttons) fadeInUp(buttons, 0.8);
+      }, 100);
+    }
+    
+    // Floating animation for the date
+    const dateElement = heroContent?.querySelector('.hero-date');
+    if (dateElement) {
+      animate(
+        dateElement,
+        { y: [0, -10, 0] },
+        { 
+          duration: 3,
+          repeat: Infinity,
+          easing: 'ease-in-out'
+        }
+      );
+    }
   });
 </script>
 
@@ -12,6 +53,7 @@
   <!-- Vídeo Background -->
   <div class="hero-video-container">
     <video 
+      bind:this={heroVideo}
       autoplay 
       loop 
       muted 
@@ -29,7 +71,7 @@
     <div class="hero-overlay"></div>
   </div>
 
-  <div class="hero-content" class:visible>
+  <div class="hero-content" class:visible bind:this={heroContent}>
     <h1 class="chicano-title">Festival Lowrider</h1>
     <h2 class="script-accent">& Cultura Chicana</h2>
     <p class="hero-subtitle lowrider-text">O maior encontro de cultura automotiva e arte chicana do Brasil</p>
@@ -103,6 +145,15 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
+  }
+  
+  .hero-content h1,
+  .hero-content h2,
+  .hero-content .hero-subtitle,
+  .hero-content .hero-date,
+  .hero-content .cta-buttons {
+    opacity: 0;
+    transform: translateY(30px);
   }
   
   .hero-content.visible {

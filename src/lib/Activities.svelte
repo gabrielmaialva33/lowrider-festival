@@ -1,5 +1,8 @@
 <script>
+  import { onMount } from 'svelte';
+  import { inView } from 'motion';
   import LowriderIcons from './LowriderIcons.svelte';
+  import { staggerGrid, magneticButton } from './animations.js';
   
   const activities = [
     { icon: 'lowrider-car', title: 'Exposição Lowriders', desc: 'Os carros mais icônicos da cultura lowrider em exposição' },
@@ -9,9 +12,25 @@
     { icon: 'chicano-art', title: 'Arte Chicana', desc: 'Exposição e criação ao vivo de arte urbana' },
     { icon: 'hydraulics', title: 'Hop Contest', desc: 'Competição de suspensão hidráulica' }
   ];
+  
+  let activitiesSection;
+  let hasAnimated = false;
+  
+  onMount(() => {
+    // Set up scroll-triggered animations
+    if (activitiesSection) {
+      inView(activitiesSection, () => {
+        if (!hasAnimated) {
+          hasAnimated = true;
+          const cards = activitiesSection.querySelectorAll('.activity-card');
+          staggerGrid(cards, 0.2);
+        }
+      }, { margin: '-100px' });
+    }
+  });
 </script>
 
-<section class="activities" id="activities">
+<section class="activities" id="activities" bind:this={activitiesSection}>
   <div class="container">
     <h2 class="section-title">Principais Atrações</h2>
     <div class="activities-grid">
@@ -53,6 +72,9 @@
     box-shadow: 
       0 8px 32px rgba(0,0,0,0.3),
       inset 0 1px 0 rgba(255,255,255,0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    will-change: transform, opacity;
   }
   
   .activity-card::before {
