@@ -386,6 +386,21 @@ section {
   100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
+/* Lazy loading image utilities */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.lazy-image.loading {
+  background: linear-gradient(45deg, #333, #555);
+  animation: pulse 1.5s infinite;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .section-title {
