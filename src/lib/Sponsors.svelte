@@ -1,6 +1,7 @@
 <script>
     import {onMount} from 'svelte';
     import {Spring} from 'svelte/motion';
+    import {getAssetPath} from './getAssetPath.js';
 
     const sponsors = [
         {
