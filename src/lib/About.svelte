@@ -9,7 +9,7 @@
             title: 'Exposição de Carros',
             desc: '200+ lowriders e veículos customizados em exposição',
             highlight: 'Mais de 200 carros únicos',
-            color: 'var(--candy-red)'
+            color: 'var(--coral)'
         },
         {
             icon: Utensils,
