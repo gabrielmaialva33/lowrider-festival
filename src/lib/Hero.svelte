@@ -87,8 +87,8 @@
     overflow: hidden;
   }
   
-  .hero-gif-container {
-    position: absolute;
+  .hero-video-container {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -97,19 +97,13 @@
     overflow: hidden;
   }
   
-  .hero-gif {
+  .hero-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     filter: brightness(0.7) contrast(1.1);
-    transform: scale(1.05);
-    transition: all 0.8s ease-in-out;
-  }
-  
-  .hero-gif:hover {
-    transform: scale(1.08);
-    filter: brightness(0.8) contrast(1.2);
+    transform: scale(1.02);
   }
   
   .hero-overlay {
