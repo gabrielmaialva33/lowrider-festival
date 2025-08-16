@@ -14,17 +14,10 @@
     { id: 'culture', name: 'Cultura', icon: '🎭' }
   ];
   
-  // Placeholder images - will be replaced with real content
-  const galleryItems = [
-    { id: 1, category: 'cars', title: 'Chevy Impala 64', description: 'Clássico lowrider com hydraulics', src: '/images/gallery/car-01.jpg', placeholder: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop&crop=center' },
-    { id: 2, category: 'cars', title: 'Cadillac DeVille', description: 'Pintura candy apple red', src: '/images/gallery/car-02.jpg', placeholder: 'https://images.unsplash.com/photo-1494905998402-395d579af36f?w=600&h=400&fit=crop&crop=center' },
-    { id: 3, category: 'bikes', title: 'Lowrider Bike', description: 'Bike customizada dourada', src: '/images/gallery/bike-01.jpg', placeholder: 'https://images.unsplash.com/photo-1558618047-b50c0e2bb1ab?w=600&h=400&fit=crop&crop=center' },
-    { id: 4, category: 'art', title: 'Mural Chicano', description: 'Arte de rua lowrider', src: '/images/gallery/art-01.jpg', placeholder: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=center' },
-    { id: 5, category: 'cars', title: 'Monte Carlo 85', description: 'Sistema de som premium', src: '/images/gallery/car-03.jpg', placeholder: 'https://images.unsplash.com/photo-1550355191-aa8a80b41353?w=600&h=400&fit=crop&crop=center' },
-    { id: 6, category: 'culture', title: 'Festival Crowd', description: 'Público curtindo o evento', src: '/images/gallery/culture-01.jpg', placeholder: 'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600&h=400&fit=crop&crop=center' },
-    { id: 7, category: 'art', title: 'Chicano Tattoo', description: 'Arte corporal tradicional', src: '/images/gallery/art-02.jpg', placeholder: 'https://images.unsplash.com/photo-1611073391283-5a48bb8a6de0?w=600&h=400&fit=crop&crop=center' },
-    { id: 8, category: 'bikes', title: 'Beach Cruiser', description: 'Estilo clássico californiano', src: '/images/gallery/bike-02.jpg', placeholder: 'https://images.unsplash.com/photo-1544191696-15693a4d71b5?w=600&h=400&fit=crop&crop=center' }
-  ];
+  import { galleryAssets, optimizeImageUrl } from './AssetManager.svelte';
+  
+  // Imagens reais do festival lowrider
+  const galleryItems = galleryAssets;
   
   $: filteredItems = selectedCategory === 'all' 
     ? galleryItems 
