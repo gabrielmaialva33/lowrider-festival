@@ -4,7 +4,8 @@ Landing page oficial do maior festival de cultura lowrider e chicana do Brasil.
 
 ## 🎯 Sobre o Projeto
 
-Site desenvolvido em **Svelte + Vite** para o Festival Lowrider & Cultura Chicana, evento que acontecerá nos dias **28 e 29 de junho de 2025** no Aeroporto Municipal.
+Site desenvolvido em **Svelte + Vite** para o Festival Lowrider & Cultura Chicana, evento que acontecerá nos dias **28 e
+29 de junho de 2025** no Aeroporto Municipal.
 
 ### ✨ Principais Características
 
@@ -67,11 +68,11 @@ src/
 
 ```css
 :root {
-  --primary: #ff6b35;    /* Laranja */
-  --secondary: #764ba2;  /* Roxo */
-  --accent: #667eea;     /* Azul */
-  --dark: #1a1a1a;       /* Escuro */
-  --light: #f8f9fa;      /* Claro */
+    --primary: #ff6b35; /* Laranja */
+    --secondary: #764ba2; /* Roxo */
+    --accent: #667eea; /* Azul */
+    --dark: #1a1a1a; /* Escuro */
+    --light: #f8f9fa; /* Claro */
 }
 ```
 

@@ -34,22 +34,26 @@ lowrider-festival/
 ## 🚀 Como Executar
 
 ### Pré-requisitos
+
 - Node.js (versão 20+ recomendada)
 - NPM
 
 ### Instalação
+
 ```bash
 # Instalar dependências
 npm install
 ```
 
 ### Desenvolvimento
+
 ```bash
 # Iniciar servidor de desenvolvimento
 npm run dev
 ```
 
 ### Build de Produção
+
 ```bash
 # Gerar build otimizado
 npm run build
@@ -61,11 +65,13 @@ npm run preview
 ## 📱 Funcionalidades
 
 ### Navegação
+
 - Menu fixo com efeito ao scroll
 - Menu hambúrguer responsivo para mobile
 - Smooth scroll para as seções
 
 ### Seções da Landing Page
+
 1. **Hero**: Banner principal com data e CTAs
 2. **Sobre**: Informações do evento e estatísticas
 3. **Atrações**: 6 cards animados com as principais atividades
@@ -77,6 +83,7 @@ npm run preview
 9. **Footer**: Links para redes sociais
 
 ### Destaques Técnicos
+
 - Componentes reativos com Svelte
 - Formulário funcional com validação
 - Animações CSS3 otimizadas
@@ -87,7 +94,8 @@ npm run preview
 
 **Data**: 28 e 29 de Junho de 2025
 **Local**: Aeroporto Municipal
-**Atrações**: 
+**Atrações**:
+
 - Exposição Lowriders
 - Lowbikes Show
 - Disputa In Roça
@@ -96,12 +104,14 @@ npm run preview
 - Hop Contest
 
 ## 👥 Equipe Organizadora
+
 - Josi - Coordenador Geral
 - Maia - Diretor de Produção
 - Jim - Coordenador Técnico
 - Bruno - Diretor de Marketing
 
 ## 🤝 Parceiros Estratégicos
+
 - Marcia
 - Osmar Borges
 - Bruno Disputa In Roça (Parceiro Especial - Competições)
@@ -111,15 +121,18 @@ npm run preview
 - Anderson
 
 ## 📄 Licença
+
 Todos os direitos reservados - Festival Lowrider & Cultura Chicana 2025
 
 ## 🛠️ Tecnologias Utilizadas
+
 - [Svelte](https://svelte.dev/) - Framework JavaScript reativo
 - [Vite](https://vitejs.dev/) - Build tool rápido e moderno
 - CSS3 - Estilos e animações
 - HTML5 - Estrutura semântica
 
 ## 📝 Notas
+
 - O projeto está pronto para deploy
 - Build otimizado com apenas ~40KB de JavaScript
 - CSS minificado com ~11KB
