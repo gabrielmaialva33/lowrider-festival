@@ -103,8 +103,16 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        filter: brightness(0.7) contrast(1.1);
+        filter: brightness(0.6) contrast(1.2) saturate(1.1);
         transform: scale(1.02);
+    }
+
+    /* Optimize video for mobile */
+    @media (max-width: 768px) {
+        .hero-video {
+            object-position: center;
+            filter: brightness(0.5) contrast(1.3);
+        }
     }
 
     .hero-overlay {
@@ -114,9 +122,10 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(135deg,
-        rgba(204, 0, 0, 0.8) 0%,
-        rgba(74, 14, 78, 0.7) 50%,
-        rgba(0, 71, 171, 0.8) 100%
+        rgba(83, 67, 127, 0.8) 0%,
+        rgba(153, 104, 226, 0.7) 30%,
+        rgba(44, 111, 153, 0.8) 70%,
+        rgba(0, 188, 170, 0.9) 100%
         );
         z-index: 1;
     }
@@ -128,8 +137,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: linear-gradient(45deg, transparent 35%, var(--gold-accent) 35%, var(--gold-accent) 36%, transparent 36%),
-        linear-gradient(-45deg, transparent 35%, var(--turquoise) 35%, var(--turquoise) 36%, transparent 36%);
+        background-image: linear-gradient(45deg, transparent 35%, var(--peach) 35%, var(--peach) 36%, transparent 36%),
+        linear-gradient(-45deg, transparent 35%, var(--teal) 35%, var(--teal) 36%, transparent 36%);
         background-size: 60px 60px;
         opacity: 0.05;
     }
@@ -194,16 +203,129 @@
     }
 
     @media (max-width: 768px) {
-        h1 {
-            font-size: 2.5em;
+        .hero {
+            min-height: 100vh;
+            padding: 0 15px;
+        }
+
+        .hero-content {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8em;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
         }
 
         .hero-subtitle {
-            font-size: 1.2em;
+            font-size: 1.3em;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            padding: 0 10px;
         }
 
         .hero-date {
-            font-size: 1.4em;
+            font-size: 1.2em;
+            padding: 12px 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .cta-buttons .btn {
+            width: 100%;
+            max-width: 280px;
+            padding: 15px 30px;
+            font-size: 1.1em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            min-height: 100vh;
+            padding: 0 10px;
+        }
+
+        .hero-content {
+            max-width: 95%;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1em;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            padding: 0 5px;
+        }
+
+        .hero-date {
+            font-size: 1em;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+        }
+
+        .cta-buttons .btn {
+            padding: 12px 25px;
+            font-size: 1em;
+            max-width: 240px;
+        }
+
+        .hero-overlay::after {
+            background-size: 40px 40px;
+        }
+    }
+
+    /* Landscape mobile optimization */
+    @media (max-width: 768px) and (orientation: landscape) {
+        .hero {
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            transform: scale(0.9);
+        }
+
+        .hero-content h1 {
+            font-size: 2.2em;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8em;
+        }
+
+        .hero-subtitle {
+            font-size: 1em;
+        }
+
+        .cta-buttons {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .cta-buttons .btn {
+            padding: 10px 20px;
+            font-size: 0.9em;
+            max-width: 160px;
         }
     }
 </style>
