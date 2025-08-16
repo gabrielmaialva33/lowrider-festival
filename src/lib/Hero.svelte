@@ -9,6 +9,26 @@
 </script>
 
 <section class="hero" id="home">
+  <!-- Vídeo Background -->
+  <div class="hero-video-container">
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      poster="/images/hero-poster.jpg"
+      class="hero-video"
+    >
+      <source src="/videos/hero-lowrider.mp4" type="video/mp4">
+      <source src="/videos/hero-lowrider.webm" type="video/webm">
+      <!-- Fallback para navegadores sem suporte -->
+      Seu navegador não suporta vídeo HTML5.
+    </video>
+    
+    <!-- Overlay escuro para legibilidade -->
+    <div class="hero-overlay"></div>
+  </div>
+
   <div class="hero-content" class:visible>
     <h1 class="chicano-title">Festival Lowrider</h1>
     <h2 class="script-accent">& Cultura Chicana</h2>
