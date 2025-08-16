@@ -7,42 +7,42 @@
         {
             id: 1,
             name: 'Chrome Garage',
-            logo: '/images/sponsors/chrome-garage.png',
+            logo: getAssetPath('images/sponsors/chrome-garage.png'),
             category: 'platinum',
             description: 'Especialistas em customização automotiva'
         },
         {
             id: 2,
             name: 'Lowrider Parts Co.',
-            logo: '/images/sponsors/lowrider-parts.png',
+            logo: getAssetPath('images/sponsors/lowrider-parts.png'),
             category: 'platinum',
             description: 'Peças exclusivas para lowriders'
         },
         {
             id: 3,
             name: 'Chicano Art Studio',
-            logo: '/images/sponsors/chicano-art.png',
+            logo: getAssetPath('images/sponsors/chicano-art.png'),
             category: 'gold',
             description: 'Arte chicana autêntica'
         },
         {
             id: 4,
             name: 'Hydraulic Systems',
-            logo: '/images/sponsors/hydraulic-systems.png',
+            logo: getAssetPath('images/sponsors/hydraulic-systems.png'),
             category: 'gold',
             description: 'Sistemas hidráulicos profissionais'
         },
         {
             id: 5,
             name: 'Custom Wheels Brasil',
-            logo: '/images/sponsors/custom-wheels.png',
+            logo: getAssetPath('images/sponsors/custom-wheels.png'),
             category: 'silver',
             description: 'Rodas exclusivas e personalizadas'
         },
         {
             id: 6,
             name: 'Paint Shop Pro',
-            logo: '/images/sponsors/paint-shop.png',
+            logo: getAssetPath('images/sponsors/paint-shop.png'),
             category: 'silver',
             description: 'Pintura automotiva premium'
         }
