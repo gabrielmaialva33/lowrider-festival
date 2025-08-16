@@ -122,7 +122,6 @@
   >
     <div 
       class="lightbox-content" 
-      role="img"
       aria-labelledby="lightbox-title"
     >
       <button class="close-btn" on:click={closeLightbox}>&times;</button>
