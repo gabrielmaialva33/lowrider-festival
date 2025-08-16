@@ -6,8 +6,8 @@ export const heroAssets = {
         poster: "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg", // Placeholder poster
         sources: [
             // Placeholder - usuário pode adicionar vídeos locais depois
-            {src: "/videos/lowrider-festival.mp4", type: "video/mp4"},
-            {src: "/videos/lowrider-festival.webm", type: "video/webm"}
+            {src: getAssetPath("videos/lowrider-festival.mp4"), type: "video/mp4"},
+            {src: getAssetPath("videos/lowrider-festival.webm"), type: "video/webm"}
         ]
     },
     fallbackImage: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1920&h=1080&fit=crop&crop=center"
