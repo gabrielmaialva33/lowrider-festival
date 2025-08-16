@@ -307,12 +307,6 @@
         }
     }
 
-    /* Efeitos de glow nos inputs */
-    .form-group input:focus + .glow-effect,
-    .form-group select:focus + .glow-effect,
-    .form-group textarea:focus + .glow-effect {
-        opacity: 1;
-    }
 
     /* Responsive Design */
     @media (max-width: 768px) {
