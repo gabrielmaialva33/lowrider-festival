@@ -126,25 +126,25 @@
     }
 
     .activity-card:nth-child(1) {
-        border-color: var(--candy-red);
+        border-color: var(--coral);
         background: linear-gradient(135deg,
-        rgba(204, 0, 0, 0.95) 0%,
+        var(--coral) 0%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
 
     .activity-card:nth-child(2) {
-        border-color: var(--deep-purple);
+        border-color: var(--violet);
         background: linear-gradient(135deg,
-        rgba(74, 14, 78, 0.95) 0%,
+        var(--violet) 0%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
 
     .activity-card:nth-child(3) {
-        border-color: var(--royal-blue);
+        border-color: var(--blue);
         background: linear-gradient(135deg,
-        rgba(0, 71, 171, 0.95) 0%,
+        var(--blue) 0%,
         rgba(255, 255, 255, 0.95) 100%
         );
     }
