@@ -144,7 +144,10 @@
 <style>
     .about {
         background: linear-gradient(135deg,
-        rgba(255, 107, 53, 0.9) 0%, /* Aztec Orange */ rgba(74, 14, 78, 0.9) 50%, /* Deep Purple */ rgba(0, 71, 171, 0.9) 100% /* Royal Blue */
+        var(--white) 0%,
+        var(--pastel-pink) 30%,
+        rgba(255, 255, 255, 0.95) 70%,
+        var(--light-purple) 100%
         );
         color: white;
         min-height: 80vh;
@@ -264,10 +267,10 @@
     }
 
     .feature-card:hover .feature-icon {
-        background: rgba(255, 215, 0, 0.2);
-        border-color: var(--gold-accent);
+        background: rgba(255, 217, 174, 0.2);
+        border-color: var(--peach);
         transform: scale(1.15);
-        box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        box-shadow: 0 0 30px rgba(255, 217, 174, 0.5);
     }
 
     .feature-card:hover .icon-glow {
