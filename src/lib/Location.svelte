@@ -146,7 +146,7 @@
         font-family: var(--heading-font);
         text-transform: uppercase;
         letter-spacing: 2px;
-        border: 3px solid var(--gold-accent);
+        border: 3px solid var(--peach);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         position: relative;
         overflow: hidden;
