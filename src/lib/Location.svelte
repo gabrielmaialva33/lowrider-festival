@@ -172,7 +172,7 @@
     .location-map:hover {
         transform: scale(1.02);
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-        border-color: var(--chrome-silver);
+        border-color: var(--light-purple);
     }
 
     .location-details {
