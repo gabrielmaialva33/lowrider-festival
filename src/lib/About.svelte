@@ -154,6 +154,26 @@
     align-items: center;
   }
   
+  /* Override do título para melhor acessibilidade */
+  .about :global(.section-title) {
+    color: white !important;
+    text-shadow: 
+      3px 3px 6px rgba(0,0,0,0.8),
+      0 0 20px rgba(255, 215, 0, 0.4),
+      0 0 40px rgba(255, 215, 0, 0.2);
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+  
+  .about :global(.section-title::after) {
+    background: var(--gold-accent) !important;
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 4px 8px rgba(0,0,0,0.3);
+    height: 6px !important;
+    width: 120px !important;
+  }
+  
   .about-intro {
     text-align: center;
     font-size: 1.2em;
