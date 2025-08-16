@@ -4,26 +4,11 @@
   import { fadeInUp, fadeInScale, parallaxScroll } from './animations.js';
   
   let heroContent;
-  let heroGif;
+  let heroVideo;
   let visible = false;
-  let currentGifIndex = 0;
-  
-  // Array de GIFs de lowrider
-  const lowriderGifs = [
-    '/images/gifs/lowrider-bounce.gif',
-    '/images/gifs/impala-lowrider.gif',
-    '/images/gifs/red-lowrider.gif'
-  ];
-  
-  $: currentGif = lowriderGifs[currentGifIndex];
   
   onMount(() => {
     visible = true;
-    
-    // Alternar GIFs automaticamente a cada 8 segundos
-    const gifInterval = setInterval(() => {
-      currentGifIndex = (currentGifIndex + 1) % lowriderGifs.length;
-    }, 8000);
     
     // Enhanced entrance animations
     if (heroContent) {
@@ -56,24 +41,23 @@
         }
       );
     }
-    
-    // Cleanup interval on component destroy
-    return () => {
-      clearInterval(gifInterval);
-    };
   });
 </script>
 
 <section class="hero" id="home">
-  <!-- GIF Background Animado -->
-  <div class="hero-gif-container">
-    <img 
-      bind:this={heroGif}
-      src={currentGif} 
-      alt="Lowrider bouncing with hydraulics"
-      class="hero-gif"
-      loading="lazy"
-    />
+  <!-- Video Background Fixo -->
+  <div class="hero-video-container">
+    <video 
+      bind:this={heroVideo}
+      src="/videos/lowrider-hero.mp4" 
+      class="hero-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      poster="/images/gifs/lowrider-bounce.gif"
+    ></video>
     
     <!-- Overlay escuro para legibilidade -->
     <div class="hero-overlay"></div>
