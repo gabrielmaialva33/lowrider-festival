@@ -41,7 +41,7 @@
             {#each activities as activity}
                 <div class="activity-card hydraulic-bounce">
                     <div class="activity-icon">
-                        <LowriderIcons icon={activity.icon} size="64" color="white"/>
+                        <svelte:component this={activity.icon} size={64} color="white" />
                     </div>
                     <div class="activity-title lowrider-text">{activity.title}</div>
                     <div class="activity-desc">{activity.desc}</div>
