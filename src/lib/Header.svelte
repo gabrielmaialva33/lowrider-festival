@@ -40,7 +40,6 @@
             <li><a href="#gallery" on:click={closeMobileMenu}>Galeria</a></li>
             <li><a href="#schedule" on:click={closeMobileMenu}>Programação</a></li>
             <li><a href="#location" on:click={closeMobileMenu}>Local</a></li>
-            <li><a href="#partners" on:click={closeMobileMenu}>Parceiros</a></li>
             <li><a href="#contact" on:click={closeMobileMenu}>Inscrições</a></li>
         </ul>
 
