@@ -120,3 +120,20 @@
 </script>
 
 <!-- Este componente não renderiza nada, apenas exporta assets -->
+
+<style>
+  /* Utilitários para lazy loading de imagens */
+  :global(.lazy-image) {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  :global(.lazy-image.loaded) {
+    opacity: 1;
+  }
+  
+  :global(.lazy-image.loading) {
+    background: linear-gradient(45deg, #333, #555);
+    animation: pulse 1.5s infinite;
+  }
+</style>
