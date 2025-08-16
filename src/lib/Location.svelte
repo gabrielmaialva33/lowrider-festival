@@ -80,7 +80,7 @@
         backdrop-filter: blur(20px);
         padding: 40px;
         border-radius: 20px;
-        border: 2px solid var(--gold-accent);
+        border: 2px solid var(--peach);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         color: var(--dark);
         position: relative;
