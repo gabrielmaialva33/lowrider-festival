@@ -343,4 +343,5 @@
         .activity-card:nth-child(even):hover {
             animation: none;
         }
+    }
 </style>
