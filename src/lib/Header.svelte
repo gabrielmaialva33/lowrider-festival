@@ -58,16 +58,22 @@
     nav {
         position: fixed;
         width: 100%;
-        background: rgba(26, 26, 26, 0.95);
-        backdrop-filter: blur(10px);
+        background: linear-gradient(135deg, 
+        rgba(83, 67, 127, 0.95) 0%, 
+        rgba(168, 159, 204, 0.95) 100%);
+        backdrop-filter: blur(15px);
         z-index: 1000;
         padding: 15px 0;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     nav.scrolled {
         padding: 10px 0;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 32px rgba(83, 67, 127, 0.3);
+        background: linear-gradient(135deg, 
+        rgba(83, 67, 127, 0.98) 0%, 
+        rgba(168, 159, 204, 0.98) 100%);
     }
 
     .nav-container {
@@ -80,12 +86,22 @@
     }
 
     .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: var(--primary);
+        font-family: var(--heading-font);
+        font-size: 1.6em;
+        font-weight: 700;
+        color: var(--white);
         text-decoration: none;
         display: flex;
         align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .logo:hover {
+        color: var(--peach);
+        transform: scale(1.05);
     }
 
     .nav-links {
