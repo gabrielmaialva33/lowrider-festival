@@ -9,26 +9,39 @@
 
 /* Variáveis CSS para todo o site */
 :root {
-    /* Cores autênticas da cultura lowrider */
-    --candy-red: #CC0000;
-    --chrome-silver: #C0C0C0;
-    --royal-blue: #0047AB;
-    --deep-purple: #4A0E4E;
-    --gold-accent: #FFD700;
-
-    /* Cores da herança chicana/asteca */
-    --aztec-orange: #ff6b35;
-    --earth-brown: #8B4513;
-    --turquoise: #40E0D0;
-    --sun-yellow: #FDB813;
+    /* Paleta Pastel Horizon - cores principais */
+    --primary-purple: #53437f;
+    --light-purple: #a89fcc;
+    --white: #ffffff;
+    --pastel-pink: #ffd9e8;
+    --pink: #ff9bb6;
+    --violet: #9968e2;
+    --light-violet: #be9bff;
+    --sky-blue: #7fceff;
+    --blue: #6d81ff;
+    --ocean-blue: #2c6f99;
+    --teal: #00bcaa;
+    --rose: #c48f9e;
+    --dark-rose: #8e586f;
+    --coral: #ff5470;
+    --orange: #ff9b71;
+    --peach: #ffd9ae;
 
     /* Cores base do sistema */
-    --primary: var(--aztec-orange);
-    --secondary: var(--deep-purple);
-    --accent: var(--royal-blue);
-    --dark: #1a1a1a;
-    --light: #f8f9fa;
-    --white: #ffffff;
+    --primary: var(--primary-purple);
+    --secondary: var(--light-purple);
+    --accent: var(--violet);
+    --dark: var(--primary-purple);
+    --light: var(--white);
+
+    /* Aliases para compatibilidade */
+    --candy-red: var(--coral);
+    --chrome-silver: var(--light-purple);
+    --royal-blue: var(--blue);
+    --deep-purple: var(--primary-purple);
+    --gold-accent: var(--peach);
+    --turquoise: var(--teal);
+    --sun-yellow: var(--peach);
 
     /* Tipografia inspirada na cultura chicana */
     --heading-font: 'Bebas Neue', 'Oswald', sans-serif;
@@ -196,36 +209,45 @@ section {
     }
 }
 
-/* Gradientes inspirados em paint jobs lowrider */
+/* Gradientes inspirados na paleta Pastel Horizon */
 .candy-gradient {
     background: linear-gradient(45deg,
-    var(--candy-red) 0%,
-    var(--sun-yellow) 30%,
-    var(--candy-red) 60%,
-    var(--deep-purple) 100%);
+    var(--coral) 0%,
+    var(--pink) 30%,
+    var(--pastel-pink) 60%,
+    var(--violet) 100%);
 }
 
 .chrome-gradient {
     background: linear-gradient(135deg,
-    var(--chrome-silver) 0%,
-    #E8E8E8 25%,
-    var(--chrome-silver) 50%,
-    #B8B8B8 75%,
-    var(--chrome-silver) 100%);
+    var(--light-purple) 0%,
+    var(--white) 25%,
+    var(--light-purple) 50%,
+    var(--secondary) 75%,
+    var(--light-purple) 100%);
 }
 
-.lowrider-metallic {
+.pastel-metallic {
     background: linear-gradient(45deg,
-    var(--royal-blue) 0%,
-    var(--turquoise) 50%,
-    var(--royal-blue) 100%);
+    var(--sky-blue) 0%,
+    var(--blue) 30%,
+    var(--violet) 60%,
+    var(--light-violet) 100%);
 }
 
-.aztec-heritage {
+.horizon-gradient {
     background: linear-gradient(135deg,
-    var(--aztec-orange) 0%,
-    var(--sun-yellow) 50%,
-    var(--earth-brown) 100%);
+    var(--orange) 0%,
+    var(--peach) 30%,
+    var(--pastel-pink) 60%,
+    var(--light-violet) 100%);
+}
+
+.ocean-gradient {
+    background: linear-gradient(135deg,
+    var(--ocean-blue) 0%,
+    var(--teal) 50%,
+    var(--sky-blue) 100%);
 }
 
 /* Animations */
@@ -430,13 +452,104 @@ section {
     animation: pulse 1.5s infinite;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2em;
-    }
+/* Responsive Design - Mobile First */
+/* Container optimizations */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Button optimizations for touch */
+.btn {
+    min-height: 48px;
+    min-width: 120px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Section spacing */
+section {
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
     section {
         padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    
+    .btn {
+        font-size: 1em;
+        padding: 12px 30px;
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Typography mobile optimizations */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    .hydraulic-bounce,
+    .hydraulic-side,
+    .lowrider-hop {
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+    }
+}
+
+/* Reduce motion for mobile battery saving */
+@media (max-width: 480px) and (prefers-reduced-motion: no-preference) {
+    .hydraulic-bounce,
+    .hydraulic-side,
+    .lowrider-hop {
+        animation: none;
+    }
+    
+    .hydraulic-bounce:hover,
+    .hydraulic-side:hover,
+    .lowrider-hop:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease;
     }
 }
