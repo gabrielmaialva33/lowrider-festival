@@ -1,0 +1,398 @@
+/* Importar fontes inspiradas na tipografia chicana */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Dancing+Script:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores autênticas da cultura lowrider */
+  --candy-red: #CC0000;
+  --chrome-silver: #C0C0C0;
+  --royal-blue: #0047AB;
+  --deep-purple: #4A0E4E;
+  --gold-accent: #FFD700;
+  
+  /* Cores da herança chicana/asteca */
+  --aztec-orange: #ff6b35; /* Mantém a cor laranja original */
+  --earth-brown: #8B4513;
+  --turquoise: #40E0D0;
+  --sun-yellow: #FDB813;
+  
+  /* Cores base do sistema */
+  --primary: var(--aztec-orange);
+  --secondary: var(--deep-purple);
+  --accent: var(--royal-blue);
+  --dark: #1a1a1a;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  
+  /* Tipografia inspirada na cultura chicana */
+  --heading-font: 'Bebas Neue', 'Oswald', sans-serif;
+  --script-font: 'Dancing Script', cursive;
+  --body-font: 'Oswald', 'Segoe UI', sans-serif;
+  
+  font-family: var(--body-font);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Utility Classes */
+.btn {
+  padding: 15px 40px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255,107,53,0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--primary);
+}
+
+/* Section Styles */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-size: 3.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  color: var(--dark);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-title::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: var(--primary);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilos tipográficos chicanos */
+.chicano-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+.script-accent {
+  font-family: var(--script-font);
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.lowrider-text {
+  font-family: var(--body-font);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Efeito cromado para textos */
+.chrome-text {
+  background: var(--chrome-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: chrome-shine 3s ease-in-out infinite;
+}
+
+@keyframes chrome-shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Gradientes inspirados em paint jobs lowrider */
+.candy-gradient {
+  background: linear-gradient(45deg, 
+    var(--candy-red) 0%, 
+    var(--sun-yellow) 30%, 
+    var(--candy-red) 60%, 
+    var(--deep-purple) 100%);
+}
+
+.chrome-gradient {
+  background: linear-gradient(135deg, 
+    var(--chrome-silver) 0%, 
+    #E8E8E8 25%, 
+    var(--chrome-silver) 50%, 
+    #B8B8B8 75%, 
+    var(--chrome-silver) 100%);
+}
+
+.lowrider-metallic {
+  background: linear-gradient(45deg, 
+    var(--royal-blue) 0%, 
+    var(--turquoise) 50%, 
+    var(--royal-blue) 100%);
+}
+
+.aztec-heritage {
+  background: linear-gradient(135deg, 
+    var(--aztec-orange) 0%, 
+    var(--sun-yellow) 50%, 
+    var(--earth-brown) 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animações inspiradas em hydraulics lowrider */
+@keyframes hydraulic-bounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  15% { 
+    transform: translateY(-8px); 
+  }
+  30% { 
+    transform: translateY(-3px); 
+  }
+  45% { 
+    transform: translateY(-12px); 
+  }
+  60% { 
+    transform: translateY(-2px); 
+  }
+  75% { 
+    transform: translateY(-6px); 
+  }
+  90% { 
+    transform: translateY(-1px); 
+  }
+}
+
+@keyframes hydraulic-side-to-side {
+  0%, 100% { 
+    transform: translateX(0) rotate(0deg); 
+  }
+  25% { 
+    transform: translateX(-5px) rotate(-1deg); 
+  }
+  75% { 
+    transform: translateX(5px) rotate(1deg); 
+  }
+}
+
+@keyframes lowrider-hop {
+  0%, 100% { 
+    transform: translateY(0) scaleY(1); 
+  }
+  20% { 
+    transform: translateY(-15px) scaleY(0.95); 
+  }
+  40% { 
+    transform: translateY(-5px) scaleY(1.02); 
+  }
+  60% { 
+    transform: translateY(-20px) scaleY(0.9); 
+  }
+  80% { 
+    transform: translateY(-3px) scaleY(1.01); 
+  }
+}
+
+/* Classes para aplicar as animações */
+.hydraulic-bounce {
+  animation: hydraulic-bounce 2s ease-in-out infinite;
+}
+
+.hydraulic-bounce:hover {
+  animation: hydraulic-bounce 0.8s ease-in-out infinite;
+}
+
+.hydraulic-side {
+  animation: hydraulic-side-to-side 4s ease-in-out infinite;
+}
+
+.lowrider-hop {
+  animation: lowrider-hop 3s ease-in-out infinite;
+}
+
+.lowrider-hop:hover {
+  animation: lowrider-hop 1.5s ease-in-out infinite;
+}
+
+/* Padrões geométricos inspirados na arte asteca/chicana */
+.aztec-pattern {
+  position: relative;
+}
+
+.aztec-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 35%, var(--gold-accent) 35%, var(--gold-accent) 36%, transparent 36%),
+    linear-gradient(-45deg, transparent 35%, var(--turquoise) 35%, var(--turquoise) 36%, transparent 36%);
+  background-size: 30px 30px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.lowrider-pattern {
+  position: relative;
+}
+
+.lowrider-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      var(--chrome-silver) 10px,
+      var(--chrome-silver) 11px,
+      transparent 11px,
+      transparent 21px
+    );
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Efeitos metálicos e cromados */
+.chrome-border {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              var(--chrome-gradient) border-box;
+  border-radius: 8px;
+}
+
+.metallic-shadow {
+  box-shadow: 
+    0 8px 32px rgba(192, 192, 192, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.candy-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.candy-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  animation: candy-shine 3s ease-in-out infinite;
+}
+
+@keyframes candy-shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+}
