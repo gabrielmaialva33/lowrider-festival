@@ -7,6 +7,7 @@
   import Schedule from './lib/Schedule.svelte';
   import Location from './lib/Location.svelte';
   import Gallery from './lib/Gallery.svelte';
+  import Sponsors from './lib/Sponsors.svelte';
   import Partners from './lib/Partners.svelte';
   import Team from './lib/Team.svelte';
   import Contact from './lib/Contact.svelte';
@@ -26,6 +27,7 @@
 <Gallery />
 <Schedule />
 <Location />
+<Sponsors />
 <Partners />
 <Team />
 <Contact />
