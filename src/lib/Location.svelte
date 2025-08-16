@@ -215,7 +215,7 @@
 
     .location-details li:hover .location-icon {
         transform: scale(1.1) rotate(360deg);
-        background: var(--candy-red);
+        background: var(--coral);
         color: white;
     }
 
