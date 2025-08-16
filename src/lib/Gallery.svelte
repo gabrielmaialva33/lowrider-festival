@@ -161,11 +161,15 @@
     >
       <button class="close-btn" on:click={closeLightbox}>&times;</button>
       <img 
-        src={currentImage.placeholder} 
+        src={optimizeImageUrl(currentImage.src, 1200, 900, 90)} 
         alt={currentImage.title} 
         class="lightbox-image"
+        width="1200"
+        height="900"
+        decoding="async"
+        fetchpriority="high"
         on:error={(e) => {
-          e.target.src = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80';
+          e.target.src = currentImage.placeholder || 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80';
         }}
       />
       <div class="lightbox-info">
@@ -259,6 +263,15 @@
   .gallery-image.lazy {
     background: linear-gradient(45deg, #333, #555);
     animation: pulse 1.5s infinite;
+  }
+  
+  .gallery-image.loaded {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .gallery-image.error {
+    opacity: 0.7;
+    filter: grayscale(0.5);
   }
   
   .image-overlay {
